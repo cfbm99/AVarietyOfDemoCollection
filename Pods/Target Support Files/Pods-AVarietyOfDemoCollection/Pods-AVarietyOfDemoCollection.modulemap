@@ -1,0 +1,6 @@
+framework module Pods_AVarietyOfDemoCollection {
+  umbrella header "Pods-AVarietyOfDemoCollection-umbrella.h"
+
+  export *
+  module * { export * }
+}
