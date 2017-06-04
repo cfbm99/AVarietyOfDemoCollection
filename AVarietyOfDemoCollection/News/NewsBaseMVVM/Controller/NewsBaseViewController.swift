@@ -17,8 +17,9 @@ protocol NewsBaseViewControllerDelegate: NSObjectProtocol {
 class NewsBaseViewController: UIViewController {
     
     public lazy var tableV: UITableView = {
-        let table: UITableView = UITableView(frame: CGRect.zero, style: .plain)
+        let table: UITableView = UITableView(frame: self.view.bounds, style: .plain)
         table.register(UINib.init(nibName: "NewsBaseTableViewCell", bundle: nil), forCellReuseIdentifier: "NewsBaseTableViewCell")
+        table.register(UINib.init(nibName: "NewsBaseStyle2TableViewCell", bundle: nil), forCellReuseIdentifier: "NewsBaseStyle2TableViewCell")
         table.estimatedRowHeight = 80
         table.rowHeight = UITableViewAutomaticDimension
         return table
@@ -34,9 +35,6 @@ class NewsBaseViewController: UIViewController {
     
     func initializeInterface() {
         view.addSubview(tableV)
-        tableV.snp.makeConstraints { (make) in
-            make.top.right.left.bottom.equalToSuperview().offset(0)
-        }
     }
     
     override func didReceiveMemoryWarning() {

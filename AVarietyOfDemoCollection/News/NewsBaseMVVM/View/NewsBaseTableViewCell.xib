@@ -12,48 +12,48 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="89" id="KGk-i7-Jjw" customClass="NewsBaseTableViewCell" customModule="AVarietyOfDemoCollection" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="NewsBaseTableViewCell" rowHeight="89" id="KGk-i7-Jjw" customClass="NewsBaseTableViewCell" customModule="AVarietyOfDemoCollection" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="371" height="89"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="371" height="89"/>
+            <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="371" height="88.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="y645 645" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ust-3g-oJU" customClass="fontsizeToFitLabel" customModule="AVarietyOfDemoCollection" customModuleProvider="target">
-                        <rect key="frame" x="10" y="10" width="266.5" height="36"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="751" verticalCompressionResistancePriority="751" text="y645 645" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ust-3g-oJU" customClass="fontsizeToFitLabel" customModule="AVarietyOfDemoCollection" customModuleProvider="target">
+                        <rect key="frame" x="10" y="10" width="252.5" height="36"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PS8-Lt-Zrz" customClass="fontsizeToFitLabel" customModule="AVarietyOfDemoCollection" customModuleProvider="target">
-                        <rect key="frame" x="10" y="56" width="29" height="14"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="751" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PS8-Lt-Zrz" customClass="fontsizeToFitLabel" customModule="AVarietyOfDemoCollection" customModuleProvider="target">
+                        <rect key="frame" x="10" y="56" width="29" height="13.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSX-hc-BBc" customClass="fontsizeToFitLabel" customModule="AVarietyOfDemoCollection" customModuleProvider="target">
-                        <rect key="frame" x="10" y="10" width="266.5" height="18"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSX-hc-BBc" customClass="fontsizeToFitLabel" customModule="AVarietyOfDemoCollection" customModuleProvider="target">
+                        <rect key="frame" x="10" y="10" width="252.5" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="dCn-UT-bBn">
-                        <rect key="frame" x="286.5" y="19.5" width="74.5" height="50"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="252" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="dCn-UT-bBn">
+                        <rect key="frame" x="272.5" y="10" width="88.5" height="59.5"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="50" id="HSp-CD-UyN"/>
                             <constraint firstAttribute="width" secondItem="dCn-UT-bBn" secondAttribute="height" multiplier="1.5:1" id="chv-Bg-gF6"/>
                         </constraints>
                     </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="TSX-hc-BBc" firstAttribute="trailing" secondItem="ust-3g-oJU" secondAttribute="trailing" id="8wc-fL-mwA"/>
-                    <constraint firstItem="dCn-UT-bBn" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="9Ef-jn-4no"/>
+                    <constraint firstItem="dCn-UT-bBn" firstAttribute="top" secondItem="TSX-hc-BBc" secondAttribute="top" id="Jhf-FZ-bWg"/>
                     <constraint firstItem="ust-3g-oJU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="JkC-L0-xUh"/>
                     <constraint firstItem="TSX-hc-BBc" firstAttribute="leading" secondItem="ust-3g-oJU" secondAttribute="leading" id="Kjm-s6-rk8"/>
                     <constraint firstItem="PS8-Lt-Zrz" firstAttribute="top" secondItem="ust-3g-oJU" secondAttribute="bottom" constant="10" id="LdR-Ll-3Du"/>
                     <constraint firstItem="dCn-UT-bBn" firstAttribute="leading" secondItem="TSX-hc-BBc" secondAttribute="trailing" constant="10" id="VVb-4P-rcb"/>
                     <constraint firstItem="TSX-hc-BBc" firstAttribute="top" secondItem="ust-3g-oJU" secondAttribute="top" id="ZW2-rc-AAy"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="PS8-Lt-Zrz" secondAttribute="bottom" constant="10" id="cDo-e7-Aqz"/>
+                    <constraint firstItem="dCn-UT-bBn" firstAttribute="bottom" secondItem="PS8-Lt-Zrz" secondAttribute="bottom" id="hc8-HZ-vIJ"/>
                     <constraint firstAttribute="trailing" secondItem="dCn-UT-bBn" secondAttribute="trailing" constant="10" id="uvr-II-Ve5"/>
                     <constraint firstItem="ust-3g-oJU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="veB-Td-Q3L"/>
                     <constraint firstItem="PS8-Lt-Zrz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="wYe-Gx-8la"/>

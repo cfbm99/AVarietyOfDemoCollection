@@ -12,8 +12,8 @@ import SnapKit
 class CFRefreshNormalHeader: CFRefreshHeader {
     
     lazy var titleLb: UILabel = {
-        
         let label: UILabel = UILabel()
+        label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 12)
         return label
     }()

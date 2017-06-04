@@ -90,8 +90,16 @@ extension HeadlineNewsViewController: UITableViewDataSource, UITableViewDelegate
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell: NewsBaseTableViewCell = tableView.dequeueReusableCell(withIdentifier: "NewsBaseTableViewCell", for: indexPath) as? NewsBaseTableViewCell else { fatalError("no cell") }
-        cell.model = viewModel.listModels[indexPath.row]
-        return cell
+        let model = viewModel.listModels[indexPath.row]
+        
+        if model.listStyle == "1" {
+            guard let cell: NewsBaseTableViewCell = tableView.dequeueReusableCell(withIdentifier: "NewsBaseTableViewCell", for: indexPath) as? NewsBaseTableViewCell else { fatalError("no cell") }
+            cell.model = viewModel.listModels[indexPath.row]
+            return cell
+        } else {
+            let cell: NewsBaseStyle2TableViewCell = tableView.dequeueReusableCell(withIdentifier: "NewsBaseStyle2TableViewCell", for: indexPath) as! NewsBaseStyle2TableViewCell
+            cell.model = model
+            return cell
+        }
     }
 }
