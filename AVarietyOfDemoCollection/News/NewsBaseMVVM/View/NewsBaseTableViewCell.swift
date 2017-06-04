@@ -23,6 +23,15 @@ class NewsBaseTableViewCell: UITableViewCell {
         }
     }
     
+    var tuijianModel: NewsHeadlineTuijianModel! {
+        didSet {
+            titleLb.text = tuijianModel.stitle
+            dateLb.text = tuijianModel.sdate
+            guard let url = URL.init(string: tuijianModel.imgsrc) else { return }
+            imageV.sd_setImage(with: url)
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

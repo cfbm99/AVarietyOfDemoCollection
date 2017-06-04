@@ -12,26 +12,47 @@ import SwiftyJSON
 class HeadlineNewsViewModel: NewsBaseViewModel, ViewModelProtocol {
     
     var needCache = true
+    var tuijianLists: [NewsHeadlineTuijianModel]!
+    var sectionCountArray = [String]()
     
     public func getHeadlineNews() {
-        CFNetManager.manager.getWithCache(url: zolTouTiaoUrl,needCache: needCache,updateCache: self.isPulldown, success: { (data) in
-            if self.isPulldown {
-                self.listModels.removeAll()
-            }
-            guard let lists = JSON(data: data)["list"].arrayObject as? [[String : Any]],
-            let pics = JSON(data: data)["pics"].arrayObject as? [[String : Any]] else { return }
-            self.finishRefresh(dicArray: lists, isPulldown: self.isPulldown, complete: { (dataArray, msg) in
-                if let _ = dataArray {
-                    self.picModels = pics.map{ HeadlineNewsPicModel.init(dic: $0) }
-                    let models = lists.map{ NewsBaseListModel.init(dic: $0)}
-                    self.listModels += models
+        if self.isPulldown {
+            self.sectionCountArray.removeAll()
+            self.listModels.removeAll()
+            
+            CFNetManager.manager.post(url: zolTouTiaoTuiJianUrl, parms: nil, needCache: false, updateCache: false, success: { (data1) in
+                if let tuijian = JSON(data: data1)["list"].arrayObject as? [[String : Any]] {
+                    if tuijian.count > 0 {
+                        self.tuijianLists = tuijian.map{ NewsHeadlineTuijianModel.init(dic: $0) }
+                        self.sectionCountArray.append("tuijian")
+                        
+                        print("1")
+                    }
                 }
-                self.pulldownRefreshMsg = msg
-            })
-            self.needCache = false
-        }) { (error) in
-            self.pulldownRefreshMsg = .fail
+            }) { (error) in
+                
+            }
+            
+            DispatchQueue.global().async(execute: DispatchWorkItem.init(qos: .default, flags: DispatchWorkItemFlags.barrier, block: { 
+                print("2")
+            }))
+            
+            CFNetManager.manager.getWithCache(url: zolTouTiaoUrl,needCache: self.needCache,updateCache: self.isPulldown, success: { (data) in
+                guard let lists = JSON(data: data)["list"].arrayObject as? [[String : Any]],
+                    let pics = JSON(data: data)["pics"].arrayObject as? [[String : Any]] else { return }
+                self.finishRefresh(dicArray: lists, isPulldown: self.isPulldown, complete: { (dataArray, msg) in
+                    if let _ = dataArray {
+                        self.picModels = pics.map{ HeadlineNewsPicModel.init(dic: $0) }
+                        let models = lists.map{ NewsBaseListModel.init(dic: $0)}
+                        self.listModels += models
+                        self.sectionCountArray.append("list")
+                    }
+                    self.pulldownRefreshMsg = msg
+                })
+                self.needCache = false
+            }) { (error) in
+                self.pulldownRefreshMsg = .fail
+            }
         }
     }
-
 }

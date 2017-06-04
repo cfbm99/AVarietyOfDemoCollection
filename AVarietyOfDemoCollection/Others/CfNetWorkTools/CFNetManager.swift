@@ -91,6 +91,33 @@ extension CFNetManager {
             }
         }
     }
+    
+    func post(url: String, parms: [String : Any]? = nil, needCache: Bool, updateCache: Bool, success: ((Data) -> Void)?, fail: ((Error) -> Void)?) {
+        if needCache {
+            if let data = cfNetWorkCache.httpCacheForKey(key: url) {
+                success?(data)
+                // return
+            }
+        }
+        Alamofire.request(url, method: .post, parameters: parms, encoding: URLEncoding.default, headers: nil).response { (response) in
+            if let error = response.error {
+                print(error.localizedDescription)
+                if self.netWorkState == .notReach {
+                    print("断网啦")
+                }
+                fail?(error)
+            }else {
+                if let data = response.data {
+                    if updateCache {
+                        self.cfNetWorkCache.saveHttpCache(key: url, value: data)
+                    }
+                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: {
+                        success?(data)
+                    })
+                }
+            }
+        }
+    }
 }
 
 extension CFNetManager {

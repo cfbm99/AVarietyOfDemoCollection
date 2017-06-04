@@ -85,13 +85,34 @@ extension HeadlineNewsViewController {
 
 extension HeadlineNewsViewController: UITableViewDataSource, UITableViewDelegate {
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return viewModel.sectionCountArray.count
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let sectionName = viewModel.sectionCountArray[section]
+        if sectionName == "tuijian" {
+            return viewModel.tuijianLists.count
+        }
         return viewModel.listModels.count
     }
     
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if section == 1 {
+            return 10
+        }
+        return 0.01
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let model = viewModel.listModels[indexPath.row]
+        let sectionName = viewModel.sectionCountArray[indexPath.section]
+        if sectionName == "tuijian" {
+            let cell: NewsBaseTableViewCell = tableView.dequeueReusableCell(withIdentifier: "NewsBaseTableViewCell", for: indexPath) as! NewsBaseTableViewCell
+            cell.tuijianModel = viewModel.tuijianLists[indexPath.row]
+            return cell
+        }
         
+        let model = viewModel.listModels[indexPath.row]
         if model.listStyle == "1" {
             guard let cell: NewsBaseTableViewCell = tableView.dequeueReusableCell(withIdentifier: "NewsBaseTableViewCell", for: indexPath) as? NewsBaseTableViewCell else { fatalError("no cell") }
             cell.model = viewModel.listModels[indexPath.row]

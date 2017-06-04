@@ -42,6 +42,9 @@ public enum ScreenSize: Int {
 
 //头条
 let zolTouTiaoUrl = "http://lib.wap.zol.com.cn/ipj/docList/?v=15.0&class_id=0&isReviewing=NO&last_time=2017-05-24%2010%3A35&page=1&retina=1&vs=iph551"
+
+let zolTouTiaoTuiJianUrl = "http://lib.wap.zol.com.cn/ipj/docRecommend/?v=3.0"
+
 //摄影
 let zolSheYingUrl = "http://lib.wap.zol.com.cn/ipj/docList/?v=15.0&class_id=145&isReviewing=NO&last_time=2017-05-23%2011%3A49&page=1&retina=1&vs=iph551"
 //苹果
