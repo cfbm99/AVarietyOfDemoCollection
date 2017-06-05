@@ -17,7 +17,7 @@ protocol NewsBaseViewControllerDelegate: NSObjectProtocol {
 class NewsBaseViewController: UIViewController {
     
     public lazy var tableV: UITableView = {
-        let table: UITableView = UITableView(frame: self.view.bounds, style: .plain)
+        let table: UITableView = UITableView(frame: self.view.bounds, style: .grouped)
         table.register(UINib.init(nibName: "NewsBaseTableViewCell", bundle: nil), forCellReuseIdentifier: "NewsBaseTableViewCell")
         table.register(UINib.init(nibName: "NewsBaseStyle2TableViewCell", bundle: nil), forCellReuseIdentifier: "NewsBaseStyle2TableViewCell")
         table.estimatedRowHeight = 80

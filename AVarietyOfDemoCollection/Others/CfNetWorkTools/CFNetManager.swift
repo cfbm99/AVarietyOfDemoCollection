@@ -84,9 +84,7 @@ extension CFNetManager {
                     if updateCache {
                         self.cfNetWorkCache.saveHttpCache(key: url, value: data)
                     }
-                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: {
-                        success?(data)
-                    })
+                    success?(data)
                 }
             }
         }
@@ -111,9 +109,7 @@ extension CFNetManager {
                     if updateCache {
                         self.cfNetWorkCache.saveHttpCache(key: url, value: data)
                     }
-                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: {
-                        success?(data)
-                    })
+                    success?(data)
                 }
             }
         }

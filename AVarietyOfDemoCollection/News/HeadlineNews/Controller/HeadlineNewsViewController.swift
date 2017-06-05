@@ -19,7 +19,7 @@ class HeadlineNewsViewController: NewsBaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initializeInterface()
+        subclassInitializeInterface()
         // Do any additional setup after loading the view.
     }
     
@@ -33,13 +33,15 @@ class HeadlineNewsViewController: NewsBaseViewController {
         wheelView.removeTimer()
     }
     
-    override func initializeInterface() {
-        super.initializeInterface()
+    func subclassInitializeInterface() {
         tableV.tableHeaderView = wheelView
+        tableV.estimatedSectionHeaderHeight = 80
+        tableV.register(HeadlineNesHeaderView.self, forHeaderFooterViewReuseIdentifier: "HeadlineNesHeaderView")
         tableV.delegate = self
         tableV.dataSource = self
         addKvo()
         tableV.cf_header = CFRefreshNormalHeader(refreshClosure: { [weak self] in
+            self?.viewModel.isPulldown = true
             self?.viewModel.getHeadlineNews()
         })
         tableV.cf_header?.beginRefresh()
@@ -101,7 +103,20 @@ extension HeadlineNewsViewController: UITableViewDataSource, UITableViewDelegate
         if section == 1 {
             return 10
         }
+        return UITableViewAutomaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 0.01
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let sectionName = viewModel.sectionCountArray[section]
+        if sectionName == "tuijian" {
+            let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "HeadlineNesHeaderView")
+            return header
+        }
+        return nil
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

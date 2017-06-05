@@ -10,7 +10,7 @@ import UIKit
 
 class MainInterfaceCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var titleLb: fontsizeToFitLabel!
+    @IBOutlet weak var titleLb: FontsizeToFitLabel!
     @IBOutlet weak var imageV: UIImageView!
     
 }

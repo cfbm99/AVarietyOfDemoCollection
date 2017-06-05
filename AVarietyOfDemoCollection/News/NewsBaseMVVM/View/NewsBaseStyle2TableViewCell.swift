@@ -10,9 +10,9 @@ import UIKit
 
 class NewsBaseStyle2TableViewCell: UITableViewCell {
 
-    @IBOutlet weak var titleLb: fontsizeToFitLabel!
+    @IBOutlet weak var titleLb: FontsizeToFitLabel!
     @IBOutlet weak var imageV: UIImageView!
-    @IBOutlet weak var dateLb: fontsizeToFitLabel!
+    @IBOutlet weak var dateLb: FontsizeToFitLabel!
     
     public var model: NewsBaseListModel! {
         didSet {

@@ -8,14 +8,14 @@
 
 import UIKit
 
-class fontsizeToFitLabel: UILabel {
+class FontsizeToFitLabel: UILabel {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         fontsizeToFit = font.pointSize
     }
 }
 
-class fontsizeToFitButton: UIButton {
+class FontsizeToFitButton: UIButton {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         fontsizeToFit = titleLabel!.font.pointSize

@@ -77,7 +77,7 @@ extension NewsMainInterfaceViewController: UIScrollViewDelegate {
             return
         }
         self.addChildViewController(vc)
-        vc.view.frame = CGRect(x: screen_s.width * CGFloat(index), y: 0, width: screen_s.width, height: screen_s.height - 108)
+        vc.view.frame = CGRect(x: screen_s.width * CGFloat(index), y: 0, width: screen_s.width, height: mainScrollView.bounds.height)
         vc.view.autoresizingMask = .flexibleHeight
         vc.delegate = self
         mainScrollView.addSubview(vc.view)

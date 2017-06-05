@@ -11,8 +11,8 @@ import UIKit
 class NewsBaseTableViewCell: UITableViewCell {
     
     @IBOutlet weak var imageV: UIImageView!
-    @IBOutlet weak var titleLb: fontsizeToFitLabel!
-    @IBOutlet weak var dateLb: fontsizeToFitLabel!
+    @IBOutlet weak var titleLb: FontsizeToFitLabel!
+    @IBOutlet weak var dateLb: FontsizeToFitLabel!
     
     public var model: NewsBaseListModel! {
         didSet {
@@ -23,7 +23,7 @@ class NewsBaseTableViewCell: UITableViewCell {
         }
     }
     
-    var tuijianModel: NewsHeadlineTuijianModel! {
+    var tuijianModel: HeadlineNewsTuiJianModel! {
         didSet {
             titleLb.text = tuijianModel.stitle
             dateLb.text = tuijianModel.sdate

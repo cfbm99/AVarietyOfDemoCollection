@@ -105,20 +105,20 @@ extension WheelPlayView {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView == collectionV && scrollView.isDragging {
-            if scrollView.contentOffset.x >= CGFloat(dataArray.count - 1) * screen_s.width {
+            if scrollView.contentOffset.x >= CGFloat(dataArray.count - 1) * self.bounds.width {
                 collectionV.scrollToItem(at: IndexPath.init(row: 1, section: 0), at: .centeredHorizontally, animated: false)
             }else if (scrollView.contentOffset.x <= 0) {
                 collectionV.scrollToItem(at: IndexPath.init(row: dataArray.count - 2, section: 0), at: .centeredHorizontally, animated: false)
             }
         }
-        let num = (scrollView.contentOffset.x / self.bounds.size.width) - 0.5
+        let num = (scrollView.contentOffset.x / self.bounds.width) - 0.5
         pageControl.currentPage = Int(num)
     }
     
     func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
         if scrollView == collectionV {
             if scrollView.contentOffset.x >= (CGFloat(dataArray.count) - 1.5) * self.bounds.width {
-                collectionV.scrollToItem(at: IndexPath.init(row: 1, section: 0), at: .centeredHorizontally, animated: true)
+                collectionV.scrollToItem(at: IndexPath.init(row: 1, section: 0), at: .centeredHorizontally, animated: false)
             }
         }
     }
