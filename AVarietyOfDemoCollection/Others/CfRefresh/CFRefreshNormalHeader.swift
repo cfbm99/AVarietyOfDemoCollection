@@ -14,7 +14,7 @@ class CFRefreshNormalHeader: CFRefreshHeader {
     lazy var titleLb: UILabel = {
         let label: UILabel = UILabel()
         label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 12)
+        label.fontsizeToFit = 12
         return label
     }()
     
@@ -23,6 +23,11 @@ class CFRefreshNormalHeader: CFRefreshHeader {
             if state == .idle {
                 if oldValue == .refreshing {
                     titleLb.text = "刷新成功"
+                    UIView.animate(withDuration: 0.3, animations: {
+                        self.scrollView.contentInset.top = 0
+                    }, completion: { (finish) in
+                        self.titleLb.text = "下拉刷新"
+                    })
                 }else {
                     titleLb.text = "下拉刷新"
                 }
@@ -30,6 +35,11 @@ class CFRefreshNormalHeader: CFRefreshHeader {
                 titleLb.text = "松开即可刷新"
             }else if state == .refreshing {
                 titleLb.text = "刷新中"
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.scrollView.contentInset.top = self.bounds.height
+                }, completion: { (finish) in
+                    self.refreshingClosure?()
+                })
             }
         }
     }

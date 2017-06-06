@@ -31,6 +31,8 @@
 		186C60F71ECC0F91008C8D49 /* AVarietyOfDemoCollectionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186C60F61ECC0F91008C8D49 /* AVarietyOfDemoCollectionUITests.swift */; };
 		188B0BE91EE4E9380071DC31 /* HeadlineNewsTuiJianModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188B0BE81EE4E9380071DC31 /* HeadlineNewsTuiJianModel.swift */; };
 		188B0BEB1EE542B30071DC31 /* HeadlineNesHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188B0BEA1EE542B30071DC31 /* HeadlineNesHeaderView.swift */; };
+		188B0BED1EE551EF0071DC31 /* NewsBaseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188B0BEC1EE551EF0071DC31 /* NewsBaseDetailViewController.swift */; };
+		18F0D5001EE68A7A008CE59F /* CFRefreshNormalFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F0D4FF1EE68A7A008CE59F /* CFRefreshNormalFooter.swift */; };
 		18F67F721ECE920100CCAD8E /* MainInterfaceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F67F711ECE920100CCAD8E /* MainInterfaceCollectionViewCell.swift */; };
 		18F67F791ECE975200CCAD8E /* WheelPlayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F67F771ECE975200CCAD8E /* WheelPlayCollectionViewCell.swift */; };
 		18F67F7A1ECE975200CCAD8E /* WheelPlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F67F781ECE975200CCAD8E /* WheelPlayView.swift */; };
@@ -41,7 +43,6 @@
 		18F67F8A1ECE9CD100CCAD8E /* CFRefreshComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F67F831ECE9CD100CCAD8E /* CFRefreshComponent.swift */; };
 		18F67F8B1ECE9CD100CCAD8E /* CFRefreshHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F67F841ECE9CD100CCAD8E /* CFRefreshHeader.swift */; };
 		18F67F8C1ECE9CD100CCAD8E /* CFRefreshNormalHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F67F851ECE9CD100CCAD8E /* CFRefreshNormalHeader.swift */; };
-		18F67F8D1ECE9CD100CCAD8E /* UIScrollView+CFRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F67F861ECE9CD100CCAD8E /* UIScrollView+CFRefresh.swift */; };
 		18F67F8F1ECE9F3E00CCAD8E /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F67F8E1ECE9F3E00CCAD8E /* libsqlite3.0.tbd */; };
 		18F67F951ECEA1A400CCAD8E /* CFNetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F67F941ECEA1A400CCAD8E /* CFNetManager.swift */; };
 		18F67F9C1ECEE9F300CCAD8E /* MainInterfaceHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F67F9B1ECEE9F300CCAD8E /* MainInterfaceHeaderViewModel.swift */; };
@@ -102,6 +103,8 @@
 		186C60F81ECC0F91008C8D49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		188B0BE81EE4E9380071DC31 /* HeadlineNewsTuiJianModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadlineNewsTuiJianModel.swift; sourceTree = "<group>"; };
 		188B0BEA1EE542B30071DC31 /* HeadlineNesHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadlineNesHeaderView.swift; sourceTree = "<group>"; };
+		188B0BEC1EE551EF0071DC31 /* NewsBaseDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsBaseDetailViewController.swift; sourceTree = "<group>"; };
+		18F0D4FF1EE68A7A008CE59F /* CFRefreshNormalFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFRefreshNormalFooter.swift; sourceTree = "<group>"; };
 		18F67F711ECE920100CCAD8E /* MainInterfaceCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainInterfaceCollectionViewCell.swift; sourceTree = "<group>"; };
 		18F67F771ECE975200CCAD8E /* WheelPlayCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WheelPlayCollectionViewCell.swift; sourceTree = "<group>"; };
 		18F67F781ECE975200CCAD8E /* WheelPlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WheelPlayView.swift; sourceTree = "<group>"; };
@@ -112,7 +115,6 @@
 		18F67F831ECE9CD100CCAD8E /* CFRefreshComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFRefreshComponent.swift; sourceTree = "<group>"; };
 		18F67F841ECE9CD100CCAD8E /* CFRefreshHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFRefreshHeader.swift; sourceTree = "<group>"; };
 		18F67F851ECE9CD100CCAD8E /* CFRefreshNormalHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFRefreshNormalHeader.swift; sourceTree = "<group>"; };
-		18F67F861ECE9CD100CCAD8E /* UIScrollView+CFRefresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+CFRefresh.swift"; sourceTree = "<group>"; };
 		18F67F8E1ECE9F3E00CCAD8E /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		18F67F901ECEA11B00CCAD8E /* AVarietyOfDemoCollection-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AVarietyOfDemoCollection-Bridging-Header.h"; sourceTree = "<group>"; };
 		18F67F941ECEA1A400CCAD8E /* CFNetManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFNetManager.swift; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				18360AD71ED52D890052DA83 /* NewsBaseViewController.swift */,
+				188B0BEC1EE551EF0071DC31 /* NewsBaseDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -403,7 +406,7 @@
 				18F67F831ECE9CD100CCAD8E /* CFRefreshComponent.swift */,
 				18F67F841ECE9CD100CCAD8E /* CFRefreshHeader.swift */,
 				18F67F851ECE9CD100CCAD8E /* CFRefreshNormalHeader.swift */,
-				18F67F861ECE9CD100CCAD8E /* UIScrollView+CFRefresh.swift */,
+				18F0D4FF1EE68A7A008CE59F /* CFRefreshNormalFooter.swift */,
 			);
 			path = CfRefresh;
 			sourceTree = "<group>";
@@ -728,9 +731,10 @@
 				18F67F871ECE9CD100CCAD8E /* CFDiskCache.swift in Sources */,
 				18F67F8A1ECE9CD100CCAD8E /* CFRefreshComponent.swift in Sources */,
 				183187321ED3D73200937BF1 /* NewsMainInterfaceViewController.swift in Sources */,
-				18F67F8D1ECE9CD100CCAD8E /* UIScrollView+CFRefresh.swift in Sources */,
+				188B0BED1EE551EF0071DC31 /* NewsBaseDetailViewController.swift in Sources */,
 				18044DA51EE15E9F0051EB42 /* NewsBaseStyle2TableViewCell.swift in Sources */,
 				18360ADE1ED52D890052DA83 /* NewsBaseTableViewCell.swift in Sources */,
+				18F0D5001EE68A7A008CE59F /* CFRefreshNormalFooter.swift in Sources */,
 				186C60D91ECC0F91008C8D49 /* ViewController.swift in Sources */,
 				18F67F881ECE9CD100CCAD8E /* CFNetWorkCache.swift in Sources */,
 				186C60D71ECC0F91008C8D49 /* AppDelegate.swift in Sources */,

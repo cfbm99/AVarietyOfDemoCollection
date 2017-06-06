@@ -15,27 +15,6 @@ class CFRefreshHeader: CFRefreshComponent {
         refreshingClosure = refreshClosure
     }
     
-    override var state: CFRefreshComponent.CFRefreshState {
-        didSet {
-            if state == .idle {
-                if oldValue != .refreshing { return }
-                guard let scrollV = scrollView else { return }
-                UIView.animate(withDuration: 0.3, animations: {
-                    scrollV.contentInset.top = 0
-                }, completion: { (finish) in
-                    
-                })
-            }else if state == .refreshing {
-                guard let scrollV = scrollView else { return }
-                UIView.animate(withDuration: 0.3, animations: { 
-                    scrollV.contentInset.top = self.bounds.height
-                }, completion: { (finish) in
-                    self.refreshingClosure?()
-                })
-            }
-        }
-    }
-    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

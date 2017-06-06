@@ -8,15 +8,58 @@
 
 import UIKit
 
+var key1: Void?
+var key2: Void?
+
+extension UIScrollView {
+    
+    var cf_header: CFRefreshHeader? {
+        get {
+            return objc_getAssociatedObject(self, &key1) as? CFRefreshHeader
+        }
+        set {
+            if let header = self.cf_header,let newView = newValue {
+                if newValue != header {
+                    header.removeFromSuperview()
+                    self.insertSubview(newView, at: 0)
+                    objc_setAssociatedObject(self, &key1, newValue, .OBJC_ASSOCIATION_ASSIGN)
+                }
+            }else if let newView = newValue {
+                self.insertSubview(newView, at: 0)
+                objc_setAssociatedObject(self, &key1, newValue, .OBJC_ASSOCIATION_ASSIGN)
+            }
+        }
+    }
+    
+    var cf_footer: CFRefreshNormalFooter? {
+        get {
+            return objc_getAssociatedObject(self, &key2) as? CFRefreshNormalFooter
+        }
+        set {
+            if let footer = self.cf_footer, let newView = newValue {
+                if footer != newView {
+                    footer.removeFromSuperview()
+                    self.insertSubview(newView, at: 0)
+                    objc_setAssociatedObject(self, &key2, newView, .OBJC_ASSOCIATION_ASSIGN)
+                }
+            } else if let newView = newValue {
+                self.insertSubview(newView, at: 0)
+                objc_setAssociatedObject(self, &key2, newView, .OBJC_ASSOCIATION_ASSIGN)
+            }
+        }
+    }
+
+}
+
 class CFRefreshComponent: UIView {
     
     enum CFRefreshState {
-        case idle,pulling,refreshing,willRefresh
+        case idle,pulling,refreshing,willRefresh,noMoreData
     }
     
     public var refreshingClosure: (() -> Void)?
     public var state: CFRefreshState = .idle
-    public var scrollView: UIScrollView?
+    public var scrollView: UIScrollView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -35,21 +78,18 @@ class CFRefreshComponent: UIView {
     override func willMove(toSuperview newSuperview: UIView?) {
         super.willMove(toSuperview: newSuperview)
         removeKvo()
-        guard let newSuperView = newSuperview else { return }
-        if !newSuperView.isKind(of: UIScrollView.self) {
-            return
-        }
+        guard let newSuperView = newSuperview as? UIScrollView else { return }
         var newFrame = self.frame
         newFrame.size.width = newSuperView.bounds.width
         newFrame.origin.x = 0
         self.frame = newFrame
-        scrollView = newSuperView as? UIScrollView
-        scrollView?.alwaysBounceVertical = true
+        scrollView = newSuperView
+        newSuperView.alwaysBounceVertical = true
         addKvo()
     }
     
     deinit {
-        print("destroy header")
+        print("destroy header or footer")
     }
     
     /*
@@ -77,10 +117,16 @@ extension CFRefreshComponent {
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == "contentOffset" {
             scrollViewContentOffsetDidChange(change: change)
+        } else if keyPath == #keyPath(UIScrollView.contentSize) {
+            scrollViewContentSizeDidChange(change: change)
         }
     }
     
     public func scrollViewContentOffsetDidChange(change: [NSKeyValueChangeKey: Any]?) {
+        
+    }
+    
+    public func scrollViewContentSizeDidChange(change: [NSKeyValueChangeKey : Any]?) {
         
     }
     

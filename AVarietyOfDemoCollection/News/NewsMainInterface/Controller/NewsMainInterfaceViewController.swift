@@ -56,6 +56,7 @@ class NewsMainInterfaceViewController: UIViewController {
         }
         mainScrollView.contentSize = CGSize(width: CGFloat(subVcs.count) * screen_s.width, height: 0)
         print("add vc finish")
+        scrollViewDidEndDecelerating(mainScrollView)
     }
 
     override func didReceiveMemoryWarning() {

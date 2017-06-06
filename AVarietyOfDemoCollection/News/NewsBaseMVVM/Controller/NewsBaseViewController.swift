@@ -35,6 +35,9 @@ class NewsBaseViewController: UIViewController {
     
     func initializeInterface() {
         view.addSubview(tableV)
+        tableV.snp.makeConstraints { (make) in
+            make.top.left.right.bottom.equalToSuperview().offset(0)
+        }
     }
     
     override func didReceiveMemoryWarning() {

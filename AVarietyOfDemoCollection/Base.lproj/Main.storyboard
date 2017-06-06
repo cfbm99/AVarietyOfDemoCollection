@@ -40,20 +40,20 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="gop-7G-gV7">
-                                                    <rect key="frame" x="28" y="10" width="46.5" height="46.5"/>
+                                                    <rect key="frame" x="28" y="10" width="46" height="46"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="gop-7G-gV7" secondAttribute="height" id="z8p-Cs-SgL"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="占 位" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4lc-Zs-7gz" customClass="fontsizeToFitLabel" customModule="AVarietyOfDemoCollection" customModuleProvider="target">
-                                                    <rect key="frame" x="10" y="61.5" width="81" height="31.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="占 位" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4lc-Zs-7gz" customClass="FontsizeToFitLabel" customModule="AVarietyOfDemoCollection" customModuleProvider="target">
+                                                    <rect key="frame" x="10" y="61" width="81" height="32"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQX-Bb-1Z4" customClass="FontsizeToFitLabel" customModule="AVarietyOfDemoCollection" customModuleProvider="target">
-                                                    <rect key="frame" x="10" y="61.5" width="81" height="0.0"/>
+                                                    <rect key="frame" x="10" y="61" width="81" height="0.0"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>

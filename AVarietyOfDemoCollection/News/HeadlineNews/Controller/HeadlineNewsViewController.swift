@@ -44,6 +44,10 @@ class HeadlineNewsViewController: NewsBaseViewController {
             self?.viewModel.isPulldown = true
             self?.viewModel.getHeadlineNews()
         })
+        tableV.cf_footer = CFRefreshNormalFooter(refreshClosure: { [weak self] in
+            self?.viewModel.isPulldown = false
+            self?.viewModel.getHeadlineNews()
+        })
         tableV.cf_header?.beginRefresh()
     }
 
@@ -137,5 +141,16 @@ extension HeadlineNewsViewController: UITableViewDataSource, UITableViewDelegate
             cell.model = model
             return cell
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc: NewsBaseDetailViewController = NewsBaseDetailViewController()
+        let sectionName = viewModel.sectionCountArray[indexPath.section]
+        if sectionName == "tuijian" {
+            vc.id = viewModel.tuijianLists[indexPath.row].id
+        } else {
+            vc.id = viewModel.listModels[indexPath.row].id
+        }
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
