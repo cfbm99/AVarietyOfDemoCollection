@@ -12,7 +12,7 @@ class NewsTitlesCollectionViewCell: UICollectionViewCell {
     
     public lazy var titleLb: UILabel = {
         let label: UILabel = UILabel(frame: self.bounds)
-        label.fontsizeToFit = 13
+        label.fontsizeToFit = 15
         label.textAlignment = .center
         return label
     }()

@@ -19,7 +19,7 @@ struct NewsBaseListModel {
     var stitle: String!
     var type: String!
     var listStyle: String!
-    
+    var pics: [String]?
     
     init(dic:[String : Any]) {
         url = dic["url"] as? String ?? ""
@@ -28,9 +28,10 @@ struct NewsBaseListModel {
         stitle = dic["stitle"] as? String ?? ""
         comment_num = dic["comment_num"] as? String ?? ""
         type = dic["type"] as? String ?? ""
-        listStyle = dic["listStyle"] as? String ?? ""
+        listStyle = dic["listStyle"] as? String ?? "2"
         sdate = dic["sdate"] as? String ?? ""
         bigPicture = dic["bigPicture"] as? String ?? ""
+        pics = dic["pics"] as? [String]
     }
 
 }

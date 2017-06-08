@@ -70,21 +70,11 @@ extension HeadlineNewsViewController {
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath ==  #keyPath(HeadlineNewsViewModel.pulldownRefreshMsg){
-            if let msgValue = change?[.newKey] as? NSNumber,
-                let msg = RequestMsg(rawValue: msgValue.intValue) {
-                tableV.cf_header?.endRefresh()
-                switch msg {
-                case .success:
-                    if let models = viewModel.picModels {
-                        wheelView.dataArray = models.map{ $0.imgsrc }
-                    }
-                    tableV.reloadData()
-                case .noData:
-                    print("no data")
-                case .fail:
-                    print("fail")
+            tableV.reloadRefreshData(change: change, pulldownSuccess: {[weak self] in
+                if let models = self?.viewModel.picModels {
+                    self?.wheelView.dataArray = models.map{ $0.imgsrc }
                 }
-            }
+            })
         }
     }
 }
@@ -132,12 +122,16 @@ extension HeadlineNewsViewController: UITableViewDataSource, UITableViewDelegate
         }
         
         let model = viewModel.listModels[indexPath.row]
-        if model.listStyle == "1" {
-            guard let cell: NewsBaseTableViewCell = tableView.dequeueReusableCell(withIdentifier: "NewsBaseTableViewCell", for: indexPath) as? NewsBaseTableViewCell else { fatalError("no cell") }
-            cell.model = viewModel.listModels[indexPath.row]
+        if model.listStyle == "2" {
+            let cell: NewsBaseStyle2TableViewCell = tableView.dequeueReusableCell(withIdentifier: "NewsBaseStyle2TableViewCell", for: indexPath) as! NewsBaseStyle2TableViewCell
+            cell.model = model
+            return cell
+        } else if model.listStyle == "3" {
+            let cell: NewsBaseStyle3TableViewCell = tableView.dequeueReusableCell(withIdentifier: "NewsBaseStyle3TableViewCell", for: indexPath) as! NewsBaseStyle3TableViewCell
+            cell.model = model
             return cell
         } else {
-            let cell: NewsBaseStyle2TableViewCell = tableView.dequeueReusableCell(withIdentifier: "NewsBaseStyle2TableViewCell", for: indexPath) as! NewsBaseStyle2TableViewCell
+            guard let cell: NewsBaseTableViewCell = tableView.dequeueReusableCell(withIdentifier: "NewsBaseTableViewCell", for: indexPath) as? NewsBaseTableViewCell else { fatalError("no cell") }
             cell.model = model
             return cell
         }

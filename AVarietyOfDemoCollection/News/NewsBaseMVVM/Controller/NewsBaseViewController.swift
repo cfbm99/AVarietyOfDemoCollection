@@ -20,8 +20,11 @@ class NewsBaseViewController: UIViewController {
         let table: UITableView = UITableView(frame: self.view.bounds, style: .grouped)
         table.register(UINib.init(nibName: "NewsBaseTableViewCell", bundle: nil), forCellReuseIdentifier: "NewsBaseTableViewCell")
         table.register(UINib.init(nibName: "NewsBaseStyle2TableViewCell", bundle: nil), forCellReuseIdentifier: "NewsBaseStyle2TableViewCell")
+        table.register(UINib.init(nibName: "NewsBaseStyle3TableViewCell", bundle: nil), forCellReuseIdentifier: "NewsBaseStyle3TableViewCell")
         table.estimatedRowHeight = 80
         table.rowHeight = UITableViewAutomaticDimension
+        table.separatorInset = UIEdgeInsets.zero
+        table.separatorColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
         return table
     }()
     

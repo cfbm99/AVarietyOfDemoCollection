@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         return screen_s.width * 0.5
     }
     
-    let menus: [[String: String]] = [["title":"新闻","image":"news"],["title":"hellohellohello","image":"video"],["title":"hello","image":"video"],["title":"hello","image":"video"],["title":"hello","image":"video"],["title":"hellohellohello","image":"news"],["title":"hello","image":"video"],["title":"hello","image":"news"],["title":"hellohello","image":"news"],["title":"hellohellohello","image":"news"],["title":"hello","image":"video"]]
+    let menus: [[String: String]] = [["title":"新闻","image":"news"],["title":"QRCodeCreatAndScan","image":"video"],["title":"hello","image":"video"],["title":"hello","image":"video"],["title":"hello","image":"video"],["title":"hellohellohello","image":"news"],["title":"hello","image":"video"],["title":"hello","image":"news"],["title":"hellohello","image":"news"],["title":"hellohellohello","image":"news"],["title":"hello","image":"video"]]
     
     lazy var wheelView: WheelPlayView = {
         let view: WheelPlayView = WheelPlayView(frame: CGRect(x: 0, y: -self.headerViewHeight, width: screen_s.width, height: self.headerViewHeight))
@@ -43,6 +43,7 @@ class ViewController: UIViewController {
     }
     
     func initializeInterface() {
+        self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
         mainFlowLayout.itemSize = CGSize(width: screen_s.width / 4, height: screen_s.width / 4)
         mainFlowLayout.sectionInset = UIEdgeInsets.zero
         mainFlowLayout.minimumLineSpacing = 0
@@ -117,6 +118,9 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource {
         guard let title = menus[indexPath.row]["title"] else { return }
         if title == "新闻" {
             self.navigationController?.pushViewController(NewsMainInterfaceViewController(), animated: true)
+        } else if title == "QRCodeCreatAndScan" {
+            let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "QRCodeCreatViewController")
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     

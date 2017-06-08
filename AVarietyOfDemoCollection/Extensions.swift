@@ -48,27 +48,29 @@ extension UITableView {
         
     }
     
-    func reloadRefreshData(change: [NSKeyValueChangeKey : Any]) {
-        if let header = cf_header {
+    func reloadRefreshData(change: [NSKeyValueChangeKey : Any]?, pulldownSuccess: (() -> Void)? = nil) {
+        if let header = self.cf_header {
             if header.isRefresh() {
                 header.endRefresh()
             }
         }
-        
-        guard let value = change[.newKey] as? NSNumber,
-            let msg = PulldownRefreshMsg(rawValue: value.intValue) else { return }
-        
-        switch msg {
-        case .pulldownSuccess:
-            reloadData()
-        case .pulldownNoData:
-            print("no data")
-        case .pullupSuccess:
-            reloadData()
-        case .pullupNoData:
-            print("no more data")
-        case .fail:
-            print("fail")
+        if let footer = self.cf_footer {
+            if footer.isRefresh() {
+                footer.endRefresh()
+            }
+        }
+        if let msgValue = change?[.newKey] as? NSNumber,
+            let msg = PulldownRefreshMsg(rawValue: msgValue.intValue) {
+            
+            switch msg {
+            case .pulldownSuccess:
+                pulldownSuccess?()
+                self.reloadData()
+            case .pullupSuccess:
+                self.reloadData()
+            default:
+                break
+            }
         }
     }
 }

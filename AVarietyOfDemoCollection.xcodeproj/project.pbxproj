@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		18044DA51EE15E9F0051EB42 /* NewsBaseStyle2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18044DA31EE15E9F0051EB42 /* NewsBaseStyle2TableViewCell.swift */; };
 		18044DA61EE15E9F0051EB42 /* NewsBaseStyle2TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18044DA41EE15E9F0051EB42 /* NewsBaseStyle2TableViewCell.xib */; };
+		1829A38C1EE7CBAA00C81716 /* NewsBaseStyle3TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829A38A1EE7CBAA00C81716 /* NewsBaseStyle3TableViewCell.swift */; };
+		1829A38D1EE7CBAA00C81716 /* NewsBaseStyle3TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1829A38B1EE7CBAA00C81716 /* NewsBaseStyle3TableViewCell.xib */; };
+		1829A3961EE7D4CF00C81716 /* QRCodeCreatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829A3951EE7D4CF00C81716 /* QRCodeCreatViewController.swift */; };
 		183187321ED3D73200937BF1 /* NewsMainInterfaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183187311ED3D73200937BF1 /* NewsMainInterfaceViewController.swift */; };
 		183187361ED3DA2900937BF1 /* NewsTitlesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183187351ED3DA2900937BF1 /* NewsTitlesCollectionViewCell.swift */; };
 		18360ACF1ED522EC0052DA83 /* NewsTitlesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18360ACE1ED522EC0052DA83 /* NewsTitlesView.swift */; };
@@ -75,6 +78,9 @@
 		17E41E6C6D6B48071663EE38 /* Pods-AVarietyOfDemoCollection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVarietyOfDemoCollection.release.xcconfig"; path = "Pods/Target Support Files/Pods-AVarietyOfDemoCollection/Pods-AVarietyOfDemoCollection.release.xcconfig"; sourceTree = "<group>"; };
 		18044DA31EE15E9F0051EB42 /* NewsBaseStyle2TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsBaseStyle2TableViewCell.swift; sourceTree = "<group>"; };
 		18044DA41EE15E9F0051EB42 /* NewsBaseStyle2TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsBaseStyle2TableViewCell.xib; sourceTree = "<group>"; };
+		1829A38A1EE7CBAA00C81716 /* NewsBaseStyle3TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsBaseStyle3TableViewCell.swift; sourceTree = "<group>"; };
+		1829A38B1EE7CBAA00C81716 /* NewsBaseStyle3TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsBaseStyle3TableViewCell.xib; sourceTree = "<group>"; };
+		1829A3951EE7D4CF00C81716 /* QRCodeCreatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeCreatViewController.swift; sourceTree = "<group>"; };
 		183187311ED3D73200937BF1 /* NewsMainInterfaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsMainInterfaceViewController.swift; sourceTree = "<group>"; };
 		183187351ED3DA2900937BF1 /* NewsTitlesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTitlesCollectionViewCell.swift; sourceTree = "<group>"; };
 		18360ACE1ED522EC0052DA83 /* NewsTitlesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTitlesView.swift; sourceTree = "<group>"; };
@@ -157,6 +163,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1829A38E1EE7D49500C81716 /* QRCodeCreatAndScan */ = {
+			isa = PBXGroup;
+			children = (
+				1829A38F1EE7D49500C81716 /* QRCodeCreat */,
+				1829A3921EE7D49500C81716 /* QRCodeScan */,
+			);
+			path = QRCodeCreatAndScan;
+			sourceTree = "<group>";
+		};
+		1829A38F1EE7D49500C81716 /* QRCodeCreat */ = {
+			isa = PBXGroup;
+			children = (
+				1829A3901EE7D49500C81716 /* Controller */,
+				1829A3911EE7D49500C81716 /* View */,
+			);
+			path = QRCodeCreat;
+			sourceTree = "<group>";
+		};
+		1829A3901EE7D49500C81716 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1829A3951EE7D4CF00C81716 /* QRCodeCreatViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1829A3911EE7D49500C81716 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1829A3921EE7D49500C81716 /* QRCodeScan */ = {
+			isa = PBXGroup;
+			children = (
+				1829A3931EE7D49500C81716 /* Controller */,
+				1829A3941EE7D49500C81716 /* View */,
+			);
+			path = QRCodeScan;
+			sourceTree = "<group>";
+		};
+		1829A3931EE7D49500C81716 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1829A3941EE7D49500C81716 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		1831872C1ED3D71D00937BF1 /* News */ = {
 			isa = PBXGroup;
 			children = (
@@ -272,6 +334,8 @@
 				18360ADB1ED52D890052DA83 /* NewsBaseTableViewCell.xib */,
 				18044DA31EE15E9F0051EB42 /* NewsBaseStyle2TableViewCell.swift */,
 				18044DA41EE15E9F0051EB42 /* NewsBaseStyle2TableViewCell.xib */,
+				1829A38A1EE7CBAA00C81716 /* NewsBaseStyle3TableViewCell.swift */,
+				1829A38B1EE7CBAA00C81716 /* NewsBaseStyle3TableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -315,6 +379,7 @@
 				18F67F7D1ECE9CD100CCAD8E /* Others */,
 				18F67F731ECE971800CCAD8E /* MainInterface */,
 				1831872C1ED3D71D00937BF1 /* News */,
+				1829A38E1EE7D49500C81716 /* QRCodeCreatAndScan */,
 				186C60DA1ECC0F91008C8D49 /* Main.storyboard */,
 				183A371F1ECD4F380028D9B3 /* MacroDefine.swift */,
 				183A37231ECD6FAA0028D9B3 /* FontsizeToFitSubclass.swift */,
@@ -566,6 +631,7 @@
 				18360ADF1ED52D890052DA83 /* NewsBaseTableViewCell.xib in Resources */,
 				186C60DE1ECC0F91008C8D49 /* Assets.xcassets in Resources */,
 				186C60DC1ECC0F91008C8D49 /* Main.storyboard in Resources */,
+				1829A38D1EE7CBAA00C81716 /* NewsBaseStyle3TableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -732,6 +798,7 @@
 				18F67F8A1ECE9CD100CCAD8E /* CFRefreshComponent.swift in Sources */,
 				183187321ED3D73200937BF1 /* NewsMainInterfaceViewController.swift in Sources */,
 				188B0BED1EE551EF0071DC31 /* NewsBaseDetailViewController.swift in Sources */,
+				1829A38C1EE7CBAA00C81716 /* NewsBaseStyle3TableViewCell.swift in Sources */,
 				18044DA51EE15E9F0051EB42 /* NewsBaseStyle2TableViewCell.swift in Sources */,
 				18360ADE1ED52D890052DA83 /* NewsBaseTableViewCell.swift in Sources */,
 				18F0D5001EE68A7A008CE59F /* CFRefreshNormalFooter.swift in Sources */,
@@ -749,6 +816,7 @@
 				18360AE71ED5318E0052DA83 /* HeadlineNewsPicModel.swift in Sources */,
 				18F67F9C1ECEE9F300CCAD8E /* MainInterfaceHeaderViewModel.swift in Sources */,
 				18360ACF1ED522EC0052DA83 /* NewsTitlesView.swift in Sources */,
+				1829A3961EE7D4CF00C81716 /* QRCodeCreatViewController.swift in Sources */,
 				E819ECEF1EE3F6FF00435684 /* NewsBaseListModel.swift in Sources */,
 				18F67F791ECE975200CCAD8E /* WheelPlayCollectionViewCell.swift in Sources */,
 				18F67F891ECE9CD100CCAD8E /* HttpNetManager.swift in Sources */,
@@ -914,6 +982,7 @@
 			baseConfigurationReference = 1413D07F09A1B47568AB46C8 /* Pods-AVarietyOfDemoCollection.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = W7F3KWK7XH;
 				INFOPLIST_FILE = AVarietyOfDemoCollection/Info.plist;
@@ -931,6 +1000,7 @@
 			baseConfigurationReference = 17E41E6C6D6B48071663EE38 /* Pods-AVarietyOfDemoCollection.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = W7F3KWK7XH;
 				INFOPLIST_FILE = AVarietyOfDemoCollection/Info.plist;

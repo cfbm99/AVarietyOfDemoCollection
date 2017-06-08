@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -101,6 +102,75 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076" y="138.98050974512745"/>
+        </scene>
+        <!--Code Creat View Controller-->
+        <scene sceneID="JEc-RB-ZM4">
+            <objects>
+                <viewController storyboardIdentifier="QRCodeCreatViewController" id="IVF-uP-41O" customClass="QRCodeCreatViewController" customModule="AVarietyOfDemoCollection" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="o4J-lr-xXZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="7Oo-1v-e0f"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="com-OC-hbu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vOn-1f-Pap">
+                                <rect key="frame" x="93.5" y="196" width="187.5" height="187.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vOn-1f-Pap" secondAttribute="height" id="8q7-ju-9z6"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOp-tv-4Cg">
+                                <rect key="frame" x="165.5" y="449.5" width="43" height="30"/>
+                                <state key="normal" title=" 生 成 ">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickBtn:" destination="IVF-uP-41O" eventType="touchUpInside" id="4W5-5m-fas"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hcV-ua-W0r">
+                                <rect key="frame" x="30" y="86" width="315" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="7kl-gk-y4w"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fCb-FH-xOh">
+                                <rect key="frame" x="166" y="509.5" width="43" height="30"/>
+                                <state key="normal" title=" 合 成 ">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickSyntheticBtn:" destination="IVF-uP-41O" eventType="touchUpInside" id="S56-G9-a3t"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hcV-ua-W0r" firstAttribute="top" secondItem="o4J-lr-xXZ" secondAttribute="bottom" constant="66" id="0Yc-o2-wJN"/>
+                            <constraint firstItem="rOp-tv-4Cg" firstAttribute="top" secondItem="vOn-1f-Pap" secondAttribute="bottom" constant="66" id="F4h-pl-CKu"/>
+                            <constraint firstItem="hcV-ua-W0r" firstAttribute="leading" secondItem="com-OC-hbu" secondAttribute="leading" constant="30" id="GPC-5g-KZu"/>
+                            <constraint firstItem="fCb-FH-xOh" firstAttribute="top" secondItem="rOp-tv-4Cg" secondAttribute="bottom" constant="30" id="VpK-HD-T0K"/>
+                            <constraint firstAttribute="trailing" secondItem="hcV-ua-W0r" secondAttribute="trailing" constant="30" id="VzV-Wn-Rf2"/>
+                            <constraint firstItem="vOn-1f-Pap" firstAttribute="width" secondItem="com-OC-hbu" secondAttribute="width" multiplier="0.5" id="cnk-Rg-CSh"/>
+                            <constraint firstItem="vOn-1f-Pap" firstAttribute="centerX" secondItem="com-OC-hbu" secondAttribute="centerX" id="eGB-68-E3C"/>
+                            <constraint firstItem="rOp-tv-4Cg" firstAttribute="centerX" secondItem="com-OC-hbu" secondAttribute="centerX" id="k0k-T7-FVp"/>
+                            <constraint firstItem="fCb-FH-xOh" firstAttribute="centerX" secondItem="com-OC-hbu" secondAttribute="centerX" id="xqh-Si-ae5"/>
+                            <constraint firstItem="vOn-1f-Pap" firstAttribute="top" secondItem="hcV-ua-W0r" secondAttribute="bottom" constant="30" id="yiy-Zm-hUJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageV" destination="vOn-1f-Pap" id="DcH-L9-Qaq"/>
+                        <outlet property="textView" destination="hcV-ua-W0r" id="Urt-4D-yEK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="05U-ss-j5O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1881" y="139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oak-ak-evb">

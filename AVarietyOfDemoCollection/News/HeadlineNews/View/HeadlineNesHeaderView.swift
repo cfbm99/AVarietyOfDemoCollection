@@ -20,6 +20,7 @@ class HeadlineNesHeaderView: UITableViewHeaderFooterView {
     
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
+        contentView.backgroundColor = UIColor.white
         self.contentView.addSubview(label)
         label.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(10)

@@ -33,19 +33,19 @@ class CFRefreshNormalFooter: CFRefreshComponent {
             } else if state == .pulling {
                 titleLabel.text = "松开即可刷新"
             } else if state == .refreshing {
+                titleLabel.text = "刷新中"
                 UIView.animate(withDuration: 0.3, animations: { 
                     self.scrollView.contentInset.bottom = self.bounds.height
                 }, completion: { (finish) in
                     self.refreshingClosure?()
                 })
-                titleLabel.text = "刷新中"
             }
         }
     }
     
     init(refreshClosure: (() -> Void)? = nil) {
         super.init(frame: CGRect.zero)
-        refreshingClosure = refreshingClosure
+        refreshingClosure = refreshClosure
     }
     
     required init?(coder aDecoder: NSCoder) {

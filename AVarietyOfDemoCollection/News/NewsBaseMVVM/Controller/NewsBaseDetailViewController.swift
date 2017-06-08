@@ -60,8 +60,8 @@ class NewsBaseDetailViewController: UIViewController {
     }
     
     func initializeInterface() {
+        self.navigationController?.navigationBar.addSubview(progress)
         view.addSubview(webView)
-        webView.addSubview(progress)
         let strUrl = String.init(format: detailUrl, id)
         url = strUrl
     }

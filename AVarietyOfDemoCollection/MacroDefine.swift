@@ -41,14 +41,15 @@ public enum ScreenSize: Int {
 //*************************** 中关村api接口 ********************************
 
 //头条
-let zolTouTiaoUrl = "http://lib.wap.zol.com.cn/ipj/docList/?v=15.0&class_id=0&isReviewing=NO&last_time=2017-05-24%2010%3A35&page=1&retina=1&vs=iph551"
+let zolTouTiaoUrlpulldown = "http://lib.wap.zol.com.cn/ipj/docList/?v=15.0&class_id=0&isReviewing=NO&last_time=2017-05-24%2010%3A35&page=1&retina=1&vs=iph551"
+
+let zolTouTiaoUrlpullup = "http://lib.wap.zol.com.cn/ipj/docList/?v=15.0&class_id=0&ep_id=%@&ep_time=%@&isReviewing=NO&last_time=&page=%@&retina=1&vs=iph561"
+
+let dianLanGirl = "http://lib.wap.zol.com.cn/ipj/package/?v=2.0&hand_id=&pack_type=2&page=1&site_id=81"
 
 let zolTouTiaoTuiJianUrl = "http://lib.wap.zol.com.cn/ipj/docRecommend/?v=3.0"
 
 let detailUrl = "http://lib.wap.zol.com.cn/ipj/clientArticle/?v=4.1&fontSize=small&id=%@&picHeight=2000&picOpen=1&picWidth=500&tag=0&vs=iph561"
-
-let ufioghksdhg =
-["imei":"36A83505-2931-4961-AFC3-6E28F8271E27", "userCityId":"386", "userCountyId":"0", "userLocationId":"21", "userProvinceId":"17", "z_pro_city":"s_provice%3Dsichuan%26s_city%3Dchengdu", "Hm_lvt_ae5edc2bc4fc71370807f6187f0a2dd0":"1496562888", "lv":"1496562888", "vn":"11", "_ga":"GA1.3.1476017239.1491533496", "__cfduid":"d2ba8507f4c551202fb5b4e0896ae03071473272694", "ip_ck":"5seB7v7xj7QuMTAwOTQ2LjE0NDE4NjM5MzA%3D"]
 
 //摄影
 let zolSheYingUrl = "http://lib.wap.zol.com.cn/ipj/docList/?v=15.0&class_id=145&isReviewing=NO&last_time=2017-05-23%2011%3A49&page=1&retina=1&vs=iph551"
