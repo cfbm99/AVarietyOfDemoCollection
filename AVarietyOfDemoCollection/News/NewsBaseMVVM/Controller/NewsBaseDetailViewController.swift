@@ -26,6 +26,8 @@ class NewsBaseDetailViewController: UIViewController {
         return progress
     }()
     
+    var isClick = false
+    
     lazy var getImages: String = {
         var jsGetImages = "function getImages(){";
         jsGetImages += "var objs = document.getElementsByTagName(\"img\");";
@@ -132,7 +134,16 @@ extension NewsBaseDetailViewController: WKNavigationDelegate {
     }
     
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-        
+        if isClick {
+            if let url = navigationAction.request.url {
+                let id = url.pathComponents[1]
+                let vc: NewsBaseDetailViewController = NewsBaseDetailViewController()
+                vc.id = id
+                navigationController?.pushViewController(vc, animated: true)
+            }
+        }
+        isClick = true
         decisionHandler(.allow)
     }
+    
 }

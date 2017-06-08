@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         return screen_s.width * 0.5
     }
     
-    let menus: [[String: String]] = [["title":"新闻","image":"news"],["title":"QRCodeCreatAndScan","image":"video"],["title":"hello","image":"video"],["title":"hello","image":"video"],["title":"hello","image":"video"],["title":"hellohellohello","image":"news"],["title":"hello","image":"video"],["title":"hello","image":"news"],["title":"hellohello","image":"news"],["title":"hellohellohello","image":"news"],["title":"hello","image":"video"]]
+    let menus: [[String: String]] = [["title":"News","image":"news"],["title":"QRCodeCreatAndScan","image":"video"],["title":"CustomVideoPlayer","image":"video"],["title":"hello","image":"video"],["title":"hello","image":"video"],["title":"hellohellohello","image":"news"],["title":"hello","image":"video"],["title":"hello","image":"news"],["title":"hellohello","image":"news"],["title":"hellohellohello","image":"news"],["title":"hello","image":"video"]]
     
     lazy var wheelView: WheelPlayView = {
         let view: WheelPlayView = WheelPlayView(frame: CGRect(x: 0, y: -self.headerViewHeight, width: screen_s.width, height: self.headerViewHeight))
@@ -116,11 +116,13 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let title = menus[indexPath.row]["title"] else { return }
-        if title == "新闻" {
+        if title == "News" {
             self.navigationController?.pushViewController(NewsMainInterfaceViewController(), animated: true)
         } else if title == "QRCodeCreatAndScan" {
             let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "QRCodeCreatViewController")
             self.navigationController?.pushViewController(vc, animated: true)
+        } else if title == "CustomVideoPlayer" {
+            self.performSegue(withIdentifier: "CustomVideoPlayerViewController", sender: nil)
         }
     }
     

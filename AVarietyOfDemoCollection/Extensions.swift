@@ -108,3 +108,30 @@ extension UIButton {
         }
     }
 }
+
+extension UIColor {
+    func colorForImage(size:CGSize) -> UIImage? {
+        let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+        UIGraphicsBeginImageContextWithOptions(size, true, 0)
+        let context = UIGraphicsGetCurrentContext()
+        context?.setFillColor(self.cgColor)
+        context?.fill(rect)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
+    }
+}
+
+extension Double {
+    func setPlayTime() -> String {
+        let date:Date = NSDate.init(timeIntervalSince1970: TimeInterval(self)) as Date
+        let formatter = DateFormatter()
+        if self / 3600 >= 1 {
+            formatter.dateFormat = "HH:mm:ss"
+        }else{
+            formatter.dateFormat = "mm:ss"
+        }
+        let result = formatter.string(from: date)
+        return result
+    }
+}

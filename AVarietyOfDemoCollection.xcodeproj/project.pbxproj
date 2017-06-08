@@ -9,6 +9,18 @@
 /* Begin PBXBuildFile section */
 		18044DA51EE15E9F0051EB42 /* NewsBaseStyle2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18044DA31EE15E9F0051EB42 /* NewsBaseStyle2TableViewCell.swift */; };
 		18044DA61EE15E9F0051EB42 /* NewsBaseStyle2TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18044DA41EE15E9F0051EB42 /* NewsBaseStyle2TableViewCell.xib */; };
+		180C1A161EE933F6003EC130 /* CustomVideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C1A0B1EE933F6003EC130 /* CustomVideoPlayerViewController.swift */; };
+		180C1A171EE933F6003EC130 /* CustomVideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C1A0D1EE933F6003EC130 /* CustomVideoModel.swift */; };
+		180C1A181EE933F6003EC130 /* CustomVideoPlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C1A0E1EE933F6003EC130 /* CustomVideoPlayerModel.swift */; };
+		180C1A191EE933F6003EC130 /* CustomVideoPalyerSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C1A101EE933F6003EC130 /* CustomVideoPalyerSlider.swift */; };
+		180C1A1A1EE933F6003EC130 /* CustomVideoPlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C1A111EE933F6003EC130 /* CustomVideoPlayerTableViewCell.swift */; };
+		180C1A1B1EE933F6003EC130 /* CustomVideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C1A121EE933F6003EC130 /* CustomVideoPlayerView.swift */; };
+		180C1A1C1EE933F6003EC130 /* CustomVideoPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180C1A131EE933F6003EC130 /* CustomVideoPlayerView.xib */; };
+		180C1A1D1EE933F6003EC130 /* CustomVideoPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C1A151EE933F6003EC130 /* CustomVideoPlayerViewModel.swift */; };
+		180C1A231EE93717003EC130 /* CaRelicatorLayerAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C1A1F1EE93717003EC130 /* CaRelicatorLayerAnimation.swift */; };
+		180C1A241EE93717003EC130 /* GradientLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C1A201EE93717003EC130 /* GradientLoadingView.swift */; };
+		180C1A251EE93717003EC130 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C1A211EE93717003EC130 /* LoadingView.swift */; };
+		180C1A261EE93717003EC130 /* SmileLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C1A221EE93717003EC130 /* SmileLoadingView.swift */; };
 		1829A38C1EE7CBAA00C81716 /* NewsBaseStyle3TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829A38A1EE7CBAA00C81716 /* NewsBaseStyle3TableViewCell.swift */; };
 		1829A38D1EE7CBAA00C81716 /* NewsBaseStyle3TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1829A38B1EE7CBAA00C81716 /* NewsBaseStyle3TableViewCell.xib */; };
 		1829A3961EE7D4CF00C81716 /* QRCodeCreatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829A3951EE7D4CF00C81716 /* QRCodeCreatViewController.swift */; };
@@ -78,6 +90,18 @@
 		17E41E6C6D6B48071663EE38 /* Pods-AVarietyOfDemoCollection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVarietyOfDemoCollection.release.xcconfig"; path = "Pods/Target Support Files/Pods-AVarietyOfDemoCollection/Pods-AVarietyOfDemoCollection.release.xcconfig"; sourceTree = "<group>"; };
 		18044DA31EE15E9F0051EB42 /* NewsBaseStyle2TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsBaseStyle2TableViewCell.swift; sourceTree = "<group>"; };
 		18044DA41EE15E9F0051EB42 /* NewsBaseStyle2TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsBaseStyle2TableViewCell.xib; sourceTree = "<group>"; };
+		180C1A0B1EE933F6003EC130 /* CustomVideoPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomVideoPlayerViewController.swift; sourceTree = "<group>"; };
+		180C1A0D1EE933F6003EC130 /* CustomVideoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomVideoModel.swift; sourceTree = "<group>"; };
+		180C1A0E1EE933F6003EC130 /* CustomVideoPlayerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomVideoPlayerModel.swift; sourceTree = "<group>"; };
+		180C1A101EE933F6003EC130 /* CustomVideoPalyerSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomVideoPalyerSlider.swift; sourceTree = "<group>"; };
+		180C1A111EE933F6003EC130 /* CustomVideoPlayerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomVideoPlayerTableViewCell.swift; sourceTree = "<group>"; };
+		180C1A121EE933F6003EC130 /* CustomVideoPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomVideoPlayerView.swift; sourceTree = "<group>"; };
+		180C1A131EE933F6003EC130 /* CustomVideoPlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomVideoPlayerView.xib; sourceTree = "<group>"; };
+		180C1A151EE933F6003EC130 /* CustomVideoPlayerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomVideoPlayerViewModel.swift; sourceTree = "<group>"; };
+		180C1A1F1EE93717003EC130 /* CaRelicatorLayerAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaRelicatorLayerAnimation.swift; sourceTree = "<group>"; };
+		180C1A201EE93717003EC130 /* GradientLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientLoadingView.swift; sourceTree = "<group>"; };
+		180C1A211EE93717003EC130 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		180C1A221EE93717003EC130 /* SmileLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmileLoadingView.swift; sourceTree = "<group>"; };
 		1829A38A1EE7CBAA00C81716 /* NewsBaseStyle3TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsBaseStyle3TableViewCell.swift; sourceTree = "<group>"; };
 		1829A38B1EE7CBAA00C81716 /* NewsBaseStyle3TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsBaseStyle3TableViewCell.xib; sourceTree = "<group>"; };
 		1829A3951EE7D4CF00C81716 /* QRCodeCreatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeCreatViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +187,64 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		180C1A091EE933F6003EC130 /* CustomVideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				180C1A0A1EE933F6003EC130 /* Controller */,
+				180C1A0C1EE933F6003EC130 /* Model */,
+				180C1A0F1EE933F6003EC130 /* View */,
+				180C1A141EE933F6003EC130 /* ViewModel */,
+			);
+			path = CustomVideoPlayer;
+			sourceTree = "<group>";
+		};
+		180C1A0A1EE933F6003EC130 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				180C1A0B1EE933F6003EC130 /* CustomVideoPlayerViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		180C1A0C1EE933F6003EC130 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				180C1A0D1EE933F6003EC130 /* CustomVideoModel.swift */,
+				180C1A0E1EE933F6003EC130 /* CustomVideoPlayerModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		180C1A0F1EE933F6003EC130 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				180C1A101EE933F6003EC130 /* CustomVideoPalyerSlider.swift */,
+				180C1A111EE933F6003EC130 /* CustomVideoPlayerTableViewCell.swift */,
+				180C1A121EE933F6003EC130 /* CustomVideoPlayerView.swift */,
+				180C1A131EE933F6003EC130 /* CustomVideoPlayerView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		180C1A141EE933F6003EC130 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				180C1A151EE933F6003EC130 /* CustomVideoPlayerViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		180C1A1E1EE93717003EC130 /* LoadingAnimations */ = {
+			isa = PBXGroup;
+			children = (
+				180C1A1F1EE93717003EC130 /* CaRelicatorLayerAnimation.swift */,
+				180C1A201EE93717003EC130 /* GradientLoadingView.swift */,
+				180C1A211EE93717003EC130 /* LoadingView.swift */,
+				180C1A221EE93717003EC130 /* SmileLoadingView.swift */,
+			);
+			path = LoadingAnimations;
+			sourceTree = "<group>";
+		};
 		1829A38E1EE7D49500C81716 /* QRCodeCreatAndScan */ = {
 			isa = PBXGroup;
 			children = (
@@ -380,6 +462,7 @@
 				18F67F731ECE971800CCAD8E /* MainInterface */,
 				1831872C1ED3D71D00937BF1 /* News */,
 				1829A38E1EE7D49500C81716 /* QRCodeCreatAndScan */,
+				180C1A091EE933F6003EC130 /* CustomVideoPlayer */,
 				186C60DA1ECC0F91008C8D49 /* Main.storyboard */,
 				183A371F1ECD4F380028D9B3 /* MacroDefine.swift */,
 				183A37231ECD6FAA0028D9B3 /* FontsizeToFitSubclass.swift */,
@@ -450,6 +533,7 @@
 			children = (
 				18F67F7E1ECE9CD100CCAD8E /* CfNetWorkTools */,
 				18F67F821ECE9CD100CCAD8E /* CfRefresh */,
+				180C1A1E1EE93717003EC130 /* LoadingAnimations */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -631,6 +715,7 @@
 				18360ADF1ED52D890052DA83 /* NewsBaseTableViewCell.xib in Resources */,
 				186C60DE1ECC0F91008C8D49 /* Assets.xcassets in Resources */,
 				186C60DC1ECC0F91008C8D49 /* Main.storyboard in Resources */,
+				180C1A1C1EE933F6003EC130 /* CustomVideoPlayerView.xib in Resources */,
 				1829A38D1EE7CBAA00C81716 /* NewsBaseStyle3TableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -794,32 +879,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				180C1A1B1EE933F6003EC130 /* CustomVideoPlayerView.swift in Sources */,
 				18F67F871ECE9CD100CCAD8E /* CFDiskCache.swift in Sources */,
 				18F67F8A1ECE9CD100CCAD8E /* CFRefreshComponent.swift in Sources */,
 				183187321ED3D73200937BF1 /* NewsMainInterfaceViewController.swift in Sources */,
 				188B0BED1EE551EF0071DC31 /* NewsBaseDetailViewController.swift in Sources */,
+				180C1A1A1EE933F6003EC130 /* CustomVideoPlayerTableViewCell.swift in Sources */,
 				1829A38C1EE7CBAA00C81716 /* NewsBaseStyle3TableViewCell.swift in Sources */,
 				18044DA51EE15E9F0051EB42 /* NewsBaseStyle2TableViewCell.swift in Sources */,
+				180C1A161EE933F6003EC130 /* CustomVideoPlayerViewController.swift in Sources */,
 				18360ADE1ED52D890052DA83 /* NewsBaseTableViewCell.swift in Sources */,
 				18F0D5001EE68A7A008CE59F /* CFRefreshNormalFooter.swift in Sources */,
 				186C60D91ECC0F91008C8D49 /* ViewController.swift in Sources */,
 				18F67F881ECE9CD100CCAD8E /* CFNetWorkCache.swift in Sources */,
 				186C60D71ECC0F91008C8D49 /* AppDelegate.swift in Sources */,
+				180C1A171EE933F6003EC130 /* CustomVideoModel.swift in Sources */,
 				183187361ED3DA2900937BF1 /* NewsTitlesCollectionViewCell.swift in Sources */,
 				18360AE31ED52E7E0052DA83 /* HeadlineNewsViewModel.swift in Sources */,
+				180C1A261EE93717003EC130 /* SmileLoadingView.swift in Sources */,
 				18360ADD1ED52D890052DA83 /* NewsBaseViewController.swift in Sources */,
 				18F67F951ECEA1A400CCAD8E /* CFNetManager.swift in Sources */,
+				180C1A181EE933F6003EC130 /* CustomVideoPlayerModel.swift in Sources */,
 				188B0BEB1EE542B30071DC31 /* HeadlineNesHeaderView.swift in Sources */,
 				18360AE51ED52F190052DA83 /* NewsBaseViewModel.swift in Sources */,
 				18F67F8B1ECE9CD100CCAD8E /* CFRefreshHeader.swift in Sources */,
 				188B0BE91EE4E9380071DC31 /* HeadlineNewsTuiJianModel.swift in Sources */,
 				18360AE71ED5318E0052DA83 /* HeadlineNewsPicModel.swift in Sources */,
+				180C1A251EE93717003EC130 /* LoadingView.swift in Sources */,
 				18F67F9C1ECEE9F300CCAD8E /* MainInterfaceHeaderViewModel.swift in Sources */,
+				180C1A241EE93717003EC130 /* GradientLoadingView.swift in Sources */,
+				180C1A231EE93717003EC130 /* CaRelicatorLayerAnimation.swift in Sources */,
 				18360ACF1ED522EC0052DA83 /* NewsTitlesView.swift in Sources */,
 				1829A3961EE7D4CF00C81716 /* QRCodeCreatViewController.swift in Sources */,
+				180C1A191EE933F6003EC130 /* CustomVideoPalyerSlider.swift in Sources */,
 				E819ECEF1EE3F6FF00435684 /* NewsBaseListModel.swift in Sources */,
 				18F67F791ECE975200CCAD8E /* WheelPlayCollectionViewCell.swift in Sources */,
 				18F67F891ECE9CD100CCAD8E /* HttpNetManager.swift in Sources */,
+				180C1A1D1EE933F6003EC130 /* CustomVideoPlayerViewModel.swift in Sources */,
 				183A37201ECD4F380028D9B3 /* MacroDefine.swift in Sources */,
 				18F67F7A1ECE975200CCAD8E /* WheelPlayView.swift in Sources */,
 				18360AE11ED52DC10052DA83 /* HeadlineNewsViewController.swift in Sources */,

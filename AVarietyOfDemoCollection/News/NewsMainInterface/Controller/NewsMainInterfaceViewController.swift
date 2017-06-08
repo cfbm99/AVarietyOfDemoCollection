@@ -31,6 +31,15 @@ class NewsMainInterfaceViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        UIView.animate(withDuration: 0.3) {
+            self.navigationController?.navigationBar.transform = CGAffineTransform.identity
+            self.mainScrollView.frame = CGRect(x: 0, y: 108, width: screen_s.width, height: screen_s.height - 108)
+            self.titlesView.transform = CGAffineTransform.identity
+        }
+    }
+    
     func initializeInterface() {
         self.automaticallyAdjustsScrollViewInsets = false
         view.backgroundColor = UIColor.white
