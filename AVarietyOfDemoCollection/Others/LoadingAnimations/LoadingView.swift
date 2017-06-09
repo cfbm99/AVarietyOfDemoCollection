@@ -12,7 +12,7 @@ class LoadingView: UIView {
     
     lazy var animationLayer:CAShapeLayer = {
         let layer = CAShapeLayer()
-        let path = UIBezierPath.init(arcCenter: CGPoint.init(x: self.bounds.width / 2, y: self.bounds.width / 2), radius: self.bounds.width / 2, startAngle: -CGFloat(M_PI_2), endAngle: CGFloat(M_PI_2 * 3), clockwise: true)
+        let path = UIBezierPath.init(arcCenter: CGPoint.init(x: self.bounds.width / 2, y: self.bounds.width / 2), radius: self.bounds.width / 2, startAngle: -CGFloat.pi / 2, endAngle: CGFloat.pi / 2 * 3, clockwise: true)
         layer.strokeColor = UIColor.red.cgColor
         layer.lineWidth = 2
         layer.fillColor = UIColor.clear.cgColor
@@ -26,20 +26,6 @@ class LoadingView: UIView {
         self.layer.addSublayer(animationLayer)
         animationLayer.add(animationForLayer(), forKey: nil)
         self.layer.add(rotateAnimation(), forKey: nil)
-    }
-    
-    public class func showLoadingView(frame: CGRect,color: UIColor?,supperV: UIView) {
-        let loadingView = LoadingView(frame: frame)
-        loadingView.animationLayer.strokeColor = color?.cgColor ?? UIColor.white.cgColor
-        supperV.addSubview(loadingView)
-    }
-    
-    public class func hideLoadingView(supperV: UIView) {
-        for view in supperV.subviews {
-            if view.isKind(of: LoadingView.self) {
-                view.removeFromSuperview()
-            }
-        }
     }
     
     func animationForLayer() -> CAAnimationGroup {
@@ -66,7 +52,7 @@ class LoadingView: UIView {
     
     func rotateAnimation() -> CABasicAnimation{
         let rotate = CABasicAnimation.init(keyPath: "transform.rotation.z")
-        rotate.toValue = M_PI * 2
+        rotate.toValue = CGFloat.pi * 2
         rotate.duration = 0.9
         rotate.repeatCount = HUGE
         rotate.isRemovedOnCompletion = false

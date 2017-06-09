@@ -59,25 +59,28 @@ extension QRCodeCreatViewController {
     }
     
     fileprivate func transitionCIImageToUIImage(ciImage: CIImage, size: CGSize) -> UIImage? {
+        //获取ciimage的bounds
         let extent = ciImage.extent
+        //获取缩放比例
         let scale = min(size.width / extent.width, size.height / extent.height) * UIScreen.main.scale
-        
+        //创建bitmap(位图)
         let context = CIContext(options: nil)
         guard let bitImage = context.createCGImage(ciImage, from: extent) else { return nil }
         
         let width = extent.width * scale
         let height = extent.height * scale
-        
+        //创建灰度空间
         let cs = CGColorSpaceCreateDeviceGray()
-        
+        //创建位图上下文
         let bitRef = CGContext.init(data: nil, width:Int(width), height: Int(height), bitsPerComponent: 8, bytesPerRow: 0, space: cs, bitmapInfo: CGImageAlphaInfo.none.rawValue)
         bitRef?.interpolationQuality = .none
         bitRef?.scaleBy(x: scale, y: scale)
         bitRef?.draw(bitImage, in: extent)
-        
+        //绘制
         guard let scaleImage = bitRef?.makeImage() else { return nil }
         
         let image = UIImage.init(cgImage: scaleImage)
+        
         return image
     }
     

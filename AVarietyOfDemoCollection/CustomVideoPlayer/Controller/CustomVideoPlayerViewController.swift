@@ -34,7 +34,7 @@ class CustomVideoPlayerViewController: UIViewController {
             self?.viewModel.requestVideos()
             if let _ = self?.avPlayerView.superview {
                 self?.avPlayerView.removeFromSuperview()
-                LoadingView.hideLoadingView(supperV: (self?.avPlayerView)!)
+                LoadingViewManager.manager.hideLoadingView()
             }
             self?.avPlayerView.removeObserver()
         })
@@ -92,12 +92,12 @@ extension CustomVideoPlayerViewController: UITableViewDataSource,UITableViewDele
     func addCustomPlayerView(cell:CustomVideoPlayerTableViewCell) {
         if let _ = avPlayerView.superview {
             avPlayerView.removeFromSuperview()
-            LoadingView.hideLoadingView(supperV: avPlayerView)
+            LoadingViewManager.manager.hideLoadingView()
         }
         avPlayerView.frame = cell.convert(cell.imageV.frame, to: vedioTableView)
         avPlayerView.removeObserver()
         vedioTableView.addSubview(avPlayerView)
-        LoadingView.showLoadingView(frame: CGRect.init(x: (avPlayerView.bounds.width - avPlayerView.bounds.height * 0.2) / 2 , y: avPlayerView.bounds.height * 0.4, width: avPlayerView.bounds.height * 0.2, height: avPlayerView.bounds.height * 0.2), color: #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1), supperV: avPlayerView)
+        LoadingViewManager.manager.showLoadingView(color: #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1), toView: avPlayerView)
     }
     
 }

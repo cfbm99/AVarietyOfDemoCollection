@@ -160,7 +160,7 @@ extension CustomVideoPlayerView {
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == "status" {
             guard let value = change?[.newKey] as? NSNumber,let status = AVPlayerStatus.init(rawValue: value.intValue)  else { return }
-            LoadingView.hideLoadingView(supperV: self)
+            LoadingViewManager.manager.hideLoadingView()
             if status == .readyToPlay {
                 totalTimelb.text = totalTime.setPlayTime()
                 avPlayer.play()
