@@ -47,6 +47,7 @@ class NewsBaseDetailViewController: UIViewController {
         didSet {
             guard let url = URL.init(string: url) else { return }
             let request = URLRequest(url: url)
+            LoadingViewManager.manager.showLoadingView(color: #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1), toView: view)
             webView.load(request)
         }
     }
@@ -62,7 +63,6 @@ class NewsBaseDetailViewController: UIViewController {
     }
     
     func initializeInterface() {
-        self.navigationController?.navigationBar.addSubview(progress)
         view.addSubview(webView)
         let strUrl = String.init(format: detailUrl, id)
         url = strUrl
@@ -112,7 +112,12 @@ class NewsBaseDetailViewController: UIViewController {
 
 extension NewsBaseDetailViewController: WKNavigationDelegate {
     
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        LoadingViewManager.manager.hideLoadingView()
+    }
+    
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        LoadingViewManager.manager.hideLoadingView()
         //获取高度
         webView.evaluateJavaScript("document.body.offsetHeight") { (result, error) in
             if error == nil {

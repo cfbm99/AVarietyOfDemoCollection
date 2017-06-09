@@ -20,6 +20,7 @@ class WheelPlayView: UIView,UICollectionViewDataSource,UICollectionViewDelegate,
         let view:UICollectionView = UICollectionView(frame: self.bounds, collectionViewLayout: flowLayout)
         view.showsVerticalScrollIndicator = false
         view.showsHorizontalScrollIndicator = false
+        view.backgroundColor = UIColor.white
         view.isPagingEnabled = true
         view.register(WheelPlayCollectionViewCell.self, forCellWithReuseIdentifier: "WheelPlayCell")
         view.delegate = self

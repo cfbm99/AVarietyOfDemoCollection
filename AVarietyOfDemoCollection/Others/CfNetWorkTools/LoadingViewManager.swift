@@ -33,6 +33,7 @@ class LoadingViewManager: NSObject {
         if let loadV = loadingView {
             loadV.removeFromSuperview()
         }
+        loadingView = nil
     }
     
     

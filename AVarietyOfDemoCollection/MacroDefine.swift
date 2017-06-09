@@ -41,9 +41,11 @@ public enum ScreenSize: Int {
 //*************************** 中关村api接口 ********************************
 
 //头条
-let zolTouTiaoUrlpulldown = "http://lib.wap.zol.com.cn/ipj/docList/?v=15.0&class_id=0&isReviewing=NO&last_time=2017-05-24%2010%3A35&page=1&retina=1&vs=iph551"
+let zolTouTiaoId = "0"
 
-let zolTouTiaoUrlpullup = "http://lib.wap.zol.com.cn/ipj/docList/?v=15.0&class_id=0&ep_id=%@&ep_time=%@&isReviewing=NO&last_time=&page=%@&retina=1&vs=iph561"
+let zolNewsUrlpulldown = "http://lib.wap.zol.com.cn/ipj/docList/?v=15.0&class_id=%@&isReviewing=NO&last_time=2017-06-09%2010%3A35&page=1&retina=1&vs=iph551"
+
+let zolNewsUrlpullup = "http://lib.wap.zol.com.cn/ipj/docList/?v=15.0&class_id=%@&ep_id=%@&ep_time=%@&isReviewing=NO&last_time=&page=%@&retina=1&vs=iph561"
 
 let dianLanGirl = "http://lib.wap.zol.com.cn/ipj/package/?v=2.0&hand_id=&pack_type=2&page=1&site_id=81"
 
@@ -52,6 +54,9 @@ let zolTouTiaoTuiJianUrl = "http://lib.wap.zol.com.cn/ipj/docRecommend/?v=3.0"
 let detailUrl = "http://lib.wap.zol.com.cn/ipj/clientArticle/?v=4.1&fontSize=small&id=%@&picHeight=2000&picOpen=1&picWidth=500&tag=0&vs=iph561"
 
 //摄影
+
+let zolSheYingId = "145"
+
 let zolSheYingUrl = "http://lib.wap.zol.com.cn/ipj/docList/?v=15.0&class_id=145&isReviewing=NO&last_time=2017-05-23%2011%3A49&page=1&retina=1&vs=iph551"
 //苹果
 let zolPingGuoUrl = "http://lib.wap.zol.com.cn/ipj/docList/?v=15.0&class_id=255&isReviewing=NO&last_time=2017-05-22%2022%3A27&page=1&retina=1&vs=iph551"

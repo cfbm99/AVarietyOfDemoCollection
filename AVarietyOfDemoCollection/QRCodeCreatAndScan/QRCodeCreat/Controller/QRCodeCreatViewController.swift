@@ -42,6 +42,10 @@ class QRCodeCreatViewController: UIViewController {
             imageV.image = syntheticImage
         }
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        textView.resignFirstResponder()
+    }
 }
 
 extension QRCodeCreatViewController {

@@ -14,8 +14,6 @@ class HeadlineNewsViewModel: NewsBaseViewModel, ViewModelProtocol {
     var needCache = true
     var tuijianLists: [HeadlineNewsTuiJianModel]!
     var sectionCountArray = [String]()
-    var nowPage = 1
-    var eptimeDic = ("108667","1496894408258")
     
     public func getHeadlineNews() {
         if isPulldown {
@@ -30,7 +28,7 @@ class HeadlineNewsViewModel: NewsBaseViewModel, ViewModelProtocol {
                         self.sectionCountArray.append("tuijian")
                     }
                 }
-                self.eptimeDic = ("108667","1496894408258")
+                self.eptimeDic = ("108667","1496991605840")
                 self.getList()
             }) { (error) in
                 
@@ -42,7 +40,7 @@ class HeadlineNewsViewModel: NewsBaseViewModel, ViewModelProtocol {
     }
     
     fileprivate func getList() {
-        let url = isPulldown ? zolTouTiaoUrlpulldown : String.init(format: zolTouTiaoUrlpullup, eptimeDic.0,eptimeDic.1,"\(nowPage)")
+        let url = isPulldown ? String.init(format: zolNewsUrlpulldown, zolTouTiaoId) : String.init(format: zolNewsUrlpullup,zolTouTiaoId,eptimeDic.0,eptimeDic.1,"\(nowPage)")
         CFNetManager.manager.getWithCache(url: url,needCache: false,updateCache: isPulldown, success: { (data) in
             guard let lists = JSON(data: data)["list"].arrayObject as? [[String : Any]] else { return }
             self.finishRefresh(dicArray: lists, isPulldown: self.isPulldown, complete: { (dataArray, msg) in

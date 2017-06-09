@@ -31,12 +31,17 @@ class CustomVideoPlayerViewController: UIViewController {
         vedioTableView.rowHeight = UITableViewAutomaticDimension
         vedioTableView.separatorInset = UIEdgeInsetsMake(0, 10, 0, 10)
         vedioTableView.cf_header = CFRefreshNormalHeader.init(refreshClosure: { [weak self] in
+            self?.viewModel.isPulldown = true
             self?.viewModel.requestVideos()
             if let _ = self?.avPlayerView.superview {
                 self?.avPlayerView.removeFromSuperview()
                 LoadingViewManager.manager.hideLoadingView()
             }
             self?.avPlayerView.removeObserver()
+        })
+        vedioTableView.cf_footer = CFRefreshNormalFooter(refreshClosure: { [weak self] in
+            self?.viewModel.isPulldown = false
+            self?.viewModel.requestVideos()
         })
         Addkvo()
         viewModel.requestVideos()

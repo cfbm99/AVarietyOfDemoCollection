@@ -14,6 +14,8 @@ class NewsBaseViewModel: NSObject {
     dynamic var pulldownRefreshMsg: PulldownRefreshMsg = .fail
     
     var isPulldown = true
+    var nowPage = 1
+    var eptimeDic = ("108667","1496991605840")
     
     var picModels: [HeadlineNewsPicModel]?
     var listModels = [NewsBaseListModel]()
