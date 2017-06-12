@@ -138,8 +138,7 @@ extension NewsMainInterfaceViewController: NewsBaseViewControllerDelegate {
     func tableViewDidScroll(offsetY: CGFloat) {
    //     print(offsetY)
         if !navIsHide && offsetY < 0 {
-            UIView.animate(withDuration: 0.3, animations: { 
-                self.navigationController?.navigationBar.transform = CGAffineTransform.init(translationX: 0, y: -64)
+            UIView.animate(withDuration: 0.3, animations: {
                 self.mainScrollView.frame = CGRect(x: 0, y: 64, width: screen_s.width, height: screen_s.height - 64)
                 self.titlesView.transform = CGAffineTransform.init(translationX: 0, y: -44)
                 self.titleLb.transform = CGAffineTransform.init(translationX: 0, y: -54)
@@ -148,7 +147,6 @@ extension NewsMainInterfaceViewController: NewsBaseViewControllerDelegate {
             })
         }else if navIsHide && offsetY > 0 {
             UIView.animate(withDuration: 0.3, animations: {
-                self.navigationController?.navigationBar.transform = CGAffineTransform.identity
                 self.mainScrollView.frame = CGRect(x: 0, y: 108, width: screen_s.width, height: screen_s.height - 108)
                 self.titlesView.transform = CGAffineTransform.identity
                 self.titleLb.transform = CGAffineTransform.identity

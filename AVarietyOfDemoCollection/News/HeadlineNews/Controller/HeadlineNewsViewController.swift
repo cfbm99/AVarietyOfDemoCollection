@@ -40,6 +40,11 @@ class HeadlineNewsViewController: NewsBaseViewController {
         tableV.delegate = self
         tableV.dataSource = self
         addKvo()
+        
+        if  traitCollection.forceTouchCapability == .available, #available(iOS 9.0, *) {
+            self.registerForPreviewing(with: self, sourceView: tableV)
+        }
+        
         tableV.cf_header = CFRefreshNormalHeader(refreshClosure: { [weak self] in
             self?.viewModel.isPulldown = true
             self?.viewModel.getHeadlineNews()
@@ -76,6 +81,22 @@ extension HeadlineNewsViewController {
                 }
             })
         }
+    }
+}
+
+extension HeadlineNewsViewController: UIViewControllerPreviewingDelegate {
+    
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        guard let indexPath = tableV.indexPathForRow(at: location) else { return nil }
+        let selectCellFrame = tableV.cellForRow(at: indexPath)!.frame
+        let vc: NewsBaseDetailViewController = NewsBaseDetailViewController()
+        vc.id = viewModel.listModels[indexPath.row].id
+        previewingContext.sourceRect = selectCellFrame
+        return vc
+    }
+    
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
+        
     }
 }
 

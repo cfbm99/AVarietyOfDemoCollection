@@ -55,10 +55,11 @@ class PhotographyNewsViewController: NewsBaseViewController {
     }
     
     deinit {
-        viewModel.removeObserver(self, forKeyPath: #keyPath(HeadlineNewsViewModel.pulldownRefreshMsg))
+        if self.isViewLoaded {
+            viewModel.removeObserver(self, forKeyPath: #keyPath(PhotographyNewsViewModel.pulldownRefreshMsg))
+        }
     }
     
-
     /*
     // MARK: - Navigation
 
@@ -74,7 +75,7 @@ class PhotographyNewsViewController: NewsBaseViewController {
 extension PhotographyNewsViewController {
     
     fileprivate func addKvo() {
-        viewModel.addObserver(self, forKeyPath: #keyPath(HeadlineNewsViewModel.pulldownRefreshMsg), options: .new, context: nil)
+        viewModel.addObserver(self, forKeyPath: #keyPath(PhotographyNewsViewModel.pulldownRefreshMsg), options: .new, context: nil)
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
@@ -122,7 +123,6 @@ extension PhotographyNewsViewController: UITableViewDataSource, UITableViewDeleg
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc: NewsBaseDetailViewController = NewsBaseDetailViewController()
         vc.id = viewModel.listModels[indexPath.row].id
-        navigationController?.navigationItem.backBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: nil, action: nil)
         navigationController?.pushViewController(vc, animated: true)
     }
 }

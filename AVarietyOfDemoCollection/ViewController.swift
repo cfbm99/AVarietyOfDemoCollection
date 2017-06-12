@@ -44,7 +44,8 @@ class ViewController: UIViewController {
     
     func initializeInterface() {
         self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
-        mainFlowLayout.itemSize = CGSize(width: screen_s.width / 4, height: screen_s.width / 4)
+        //mainFlowLayout.itemSize = CGSize(width: screen_s.width / 4, height: screen_s.width / 4)
+        mainFlowLayout.estimatedItemSize = CGSize(width: 100, height: 100)
         mainFlowLayout.sectionInset = UIEdgeInsets.zero
         mainFlowLayout.minimumLineSpacing = 0
         mainFlowLayout.minimumInteritemSpacing = 0
