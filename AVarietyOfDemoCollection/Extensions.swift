@@ -10,6 +10,10 @@ import UIKit
 
 protocol ViewModelProtocol {
     
+    var needCache: Bool { get set }
+    var isPulldown: Bool { get set }
+    var nowPage: Int { get set }
+    
     func finishRequest(dicArray: [[String : Any]], complete: (([[String : Any]]?, RequestMsg) -> Void)?)
     
     func finishRefresh(dicArray: [[String : Any]], isPulldown: Bool, complete: (([[String : Any]]?, PulldownRefreshMsg) -> Void)?)
@@ -106,6 +110,15 @@ extension UIButton {
             }
             titleLabel?.font = UIFont.systemFont(ofSize: size)
         }
+    }
+}
+
+extension Date {
+    func convertDateToString(dateFormat: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = dateFormat
+        let dateStr = dateFormatter.string(from: self)
+        return dateStr
     }
 }
 

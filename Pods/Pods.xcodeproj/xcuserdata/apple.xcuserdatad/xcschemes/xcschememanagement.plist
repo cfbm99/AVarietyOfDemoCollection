@@ -24,7 +24,32 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ReachabilitySwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ReactiveCocoa.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ReactiveSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Result.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SDWebImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SQLite.swift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -47,12 +72,37 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>04FA0A9C4411034F9756EED0371EAA1D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>35E900DAC941E71150CF4668A5F24DBA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>45D47D95E734CB7A48A9ED90B4D6963B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>5AE20A0217FD2AC48A8B547F322B9A10</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>835C926E6681ECC4F011A7F67912A3E6</key>
+		<key>60263F02D537A83135FC5A9E7417BC2A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>704D5CD4502EE7115700ECE446473D41</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>76CE38638921B6C6EE9A978BB574E510</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,17 +112,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BA3F3F8ABBCE1278683C9A05917F0D12</key>
+		<key>94294F25AEE1209911129E45C929C599</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EF9F8DEA6C18F05E5EF20D70CB2AA6D2</key>
+		<key>C9F63EF39009DACB83FE90E534A2A108</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F6C7D9F479FE3FEFD01D18AE0D73DCE4</key>
+		<key>F4D666DF0A9F6263DE995781B541F75F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

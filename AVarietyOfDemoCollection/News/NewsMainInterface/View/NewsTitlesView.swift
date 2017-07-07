@@ -8,9 +8,15 @@
 
 import UIKit
 
+protocol NewsTitlesViewDelegate: NSObjectProtocol {
+    func didSelectTitle(_ title: String, index: IndexPath)
+}
+
 class NewsTitlesView: UIView {
     
-    fileprivate lazy var collectionV: UICollectionView = {
+    weak var delegate: NewsTitlesViewDelegate?
+    
+    lazy var collectionV: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: screen_s.width / 7, height: 34)
         layout.minimumLineSpacing = 0
@@ -26,6 +32,13 @@ class NewsTitlesView: UIView {
         view.delegate = self
         view.dataSource = self
         return view
+    }()
+    
+    lazy var markLine: UILabel = {
+        let mark: UILabel = UILabel()
+        mark.frame = CGRect(x: 0, y: self.collectionV.frame.height - 3, width: screen_s.width / 7, height: 3)
+        mark.backgroundColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
+        return mark
     }()
     
     fileprivate lazy var line: UILabel = {
@@ -44,6 +57,7 @@ class NewsTitlesView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.addSubview(collectionV)
+        collectionV.addSubview(markLine)
         self.addSubview(line)
     }
     
@@ -71,5 +85,13 @@ extension NewsTitlesView: UICollectionViewDataSource, UICollectionViewDelegate {
         guard let cell: NewsTitlesCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "NewsTitlesCollectionViewCell", for: indexPath) as? NewsTitlesCollectionViewCell else { fatalError("no cell") }
         cell.titleLb.text = titlesArray?[indexPath.row]
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let title = titlesArray![indexPath.row]
+        UIView.animate(withDuration: 0.3) { 
+            self.markLine.transform = CGAffineTransform.init(translationX: CGFloat(indexPath.row) * screen_s.width / 7, y: 0)
+        }
+        delegate?.didSelectTitle(title, index: indexPath)
     }
 }

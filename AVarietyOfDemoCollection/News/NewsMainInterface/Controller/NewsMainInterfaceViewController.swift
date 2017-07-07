@@ -71,6 +71,8 @@ class NewsMainInterfaceViewController: UIViewController {
         view.addSubview(titlesView)
         view.addSubview(mainScrollView)
         
+        titlesView.delegate = self
+        
         titleLb.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()
             make.top.equalToSuperview().offset(30)
@@ -97,7 +99,9 @@ class NewsMainInterfaceViewController: UIViewController {
             } else if title == "摄影" {
                 subVcs.append(PhotographyNewsViewController())
             } else {
-                subVcs.append(NewsBaseViewController())
+                let vc = NewsBaseViewController()
+                vc.view.backgroundColor = UIColor(red: CGFloat(arc4random_uniform(255)/256), green: CGFloat(arc4random_uniform(255)/256), blue: CGFloat(arc4random_uniform(255)/256), alpha: 1)
+                subVcs.append(vc)
             }
         }
         mainScrollView.contentSize = CGSize(width: CGFloat(subVcs.count) * screen_s.width, height: 0)
@@ -113,7 +117,20 @@ class NewsMainInterfaceViewController: UIViewController {
 
 extension NewsMainInterfaceViewController: UIScrollViewDelegate {
     
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.isDragging {
+            let offsetX = scrollView.contentOffset.x
+            titlesView.markLine.transform = CGAffineTransform.init(translationX: offsetX / screen_s.width * (screen_s.width / 7), y: 0)
+        }
+    }
+    
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let index = Int(scrollView.contentOffset.x / screen_s.width)
+        titlesView.collectionV.scrollToItem(at: IndexPath.init(row: index, section: 0), at: .centeredHorizontally, animated: true)
+        addSubVc(index: index)
+    }
+    
+    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
         let index = Int(scrollView.contentOffset.x / screen_s.width)
         addSubVc(index: index)
     }
@@ -131,6 +148,14 @@ extension NewsMainInterfaceViewController: UIScrollViewDelegate {
         vc.didMove(toParentViewController: self)
     }
     
+}
+
+extension NewsMainInterfaceViewController: NewsTitlesViewDelegate {
+    
+    func didSelectTitle(_ title: String, index: IndexPath) {
+        let offsetX = CGFloat(index.row) * screen_s.width
+        mainScrollView.setContentOffset(CGPoint.init(x: offsetX, y: 0), animated: true)
+    }
 }
 
 extension NewsMainInterfaceViewController: NewsBaseViewControllerDelegate {

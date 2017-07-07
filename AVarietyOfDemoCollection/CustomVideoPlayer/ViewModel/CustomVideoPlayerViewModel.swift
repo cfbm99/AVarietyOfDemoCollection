@@ -17,7 +17,7 @@ class CustomVideoPlayerViewModel: NewsBaseViewModel, ViewModelProtocol {
     
     public var vedioModels = [CustomVideoPlayerModel]()
     public var videoUrlModel: CustomVideoModel!
-    fileprivate var needCache = true
+    internal var needCache = true
     
     public func requestVideos() {
         CFNetManager.manager.getWithCache(url: url, needCache: needCache, updateCache: isPulldown, success: { (data) in

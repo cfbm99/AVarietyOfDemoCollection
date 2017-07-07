@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         return screen_s.width * 0.5
     }
     
-    let menus: [[String: String]] = [["title":"News","image":"news"],["title":"QRCodeCreatAndScan","image":"video"],["title":"CustomVideoPlayer","image":"video"],["title":"CubeRotation","image":"video"],["title":"hello","image":"video"],["title":"hellohellohello","image":"news"],["title":"hello","image":"video"],["title":"hello","image":"news"],["title":"hellohello","image":"news"],["title":"hellohellohello","image":"news"],["title":"hello","image":"video"]]
+    let menus: [[String: String]] = [["title":"News","image":"news"],["title":"QRCodeCreatAndScan","image":"video"],["title":"CustomVideoPlayer","image":"video"],["title":"CubeRotation","image":"video"],["title":"NationalGeography","image":"video"],["title":"TheChainOfGrammar","image":"news"],["title":"hello","image":"video"],["title":"hello","image":"news"],["title":"hellohello","image":"news"],["title":"hellohellohello","image":"news"],["title":"hello","image":"video"]]
     
     lazy var wheelView: WheelPlayView = {
         let view: WheelPlayView = WheelPlayView(frame: CGRect(x: 0, y: -self.headerViewHeight, width: screen_s.width, height: self.headerViewHeight))
@@ -43,7 +43,7 @@ class ViewController: UIViewController {
     }
     
     func initializeInterface() {
-        self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
+        self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
         //mainFlowLayout.itemSize = CGSize(width: screen_s.width / 4, height: screen_s.width / 4)
         mainFlowLayout.estimatedItemSize = CGSize(width: 100, height: 100)
         mainFlowLayout.sectionInset = UIEdgeInsets.zero
@@ -121,11 +121,15 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource {
             self.navigationController?.pushViewController(NewsMainInterfaceViewController(), animated: true)
         } else if title == "QRCodeCreatAndScan" {
             let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "QRCodeCreatViewController")
-            self.navigationController?.pushViewController(vc, animated: true)
+            navigationController?.pushViewController(vc, animated: true)
         } else if title == "CustomVideoPlayer" {
-            self.performSegue(withIdentifier: "CustomVideoPlayerViewController", sender: nil)
+            performSegue(withIdentifier: "CustomVideoPlayerViewController", sender: nil)
         } else if title == "CubeRotation" {
-            self.navigationController?.pushViewController(CubeRotationViewController(), animated: true)
+            navigationController?.pushViewController(CubeRotationViewController(), animated: true)
+        } else if title == "NationalGeography" {
+            navigationController?.pushViewController(NationalGeographyViewController(), animated: true)
+        } else if title == "TheChainOfGrammar" {
+            navigationController?.pushViewController(TheChainOfGrammarViewController(), animated: true)
         }
     }
     

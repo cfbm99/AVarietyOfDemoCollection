@@ -10,6 +10,9 @@ target 'AVarietyOfDemoCollection' do
   pod 'SDWebImage', '~>3.8'
   pod 'SnapKit', '~> 3.2.0'
   pod 'SwiftyJSON'
+  pod 'ReactiveCocoa'
+  pod 'SQLite.swift'
+  pod 'ReachabilitySwift'
 
   target 'AVarietyOfDemoCollectionTests' do
     inherit! :search_paths

@@ -90,6 +90,10 @@ extension CFNetManager {
         }
     }
     
+    func get(by url: String, cache: ((Data) -> Void)? = nil, success: ((Data) -> Void)?, fail: ((String) -> Void)?) {
+        
+    }
+    
     func post(url: String, parms: [String : Any]? = nil, needCache: Bool, updateCache: Bool, success: ((Data) -> Void)?, fail: ((Error) -> Void)?) {
         if needCache {
             if let data = cfNetWorkCache.httpCacheForKey(key: url) {

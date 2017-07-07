@@ -24,6 +24,8 @@
 		1829A38C1EE7CBAA00C81716 /* NewsBaseStyle3TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829A38A1EE7CBAA00C81716 /* NewsBaseStyle3TableViewCell.swift */; };
 		1829A38D1EE7CBAA00C81716 /* NewsBaseStyle3TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1829A38B1EE7CBAA00C81716 /* NewsBaseStyle3TableViewCell.xib */; };
 		1829A3961EE7D4CF00C81716 /* QRCodeCreatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829A3951EE7D4CF00C81716 /* QRCodeCreatViewController.swift */; };
+		182EA6F41EEFE02400F06F29 /* NationalGeographyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182EA6F31EEFE02400F06F29 /* NationalGeographyViewController.swift */; };
+		182EA6F61EEFE07F00F06F29 /* NationalGeographyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182EA6F51EEFE07F00F06F29 /* NationalGeographyViewModel.swift */; };
 		183187321ED3D73200937BF1 /* NewsMainInterfaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183187311ED3D73200937BF1 /* NewsMainInterfaceViewController.swift */; };
 		183187361ED3DA2900937BF1 /* NewsTitlesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183187351ED3DA2900937BF1 /* NewsTitlesCollectionViewCell.swift */; };
 		18360ACF1ED522EC0052DA83 /* NewsTitlesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18360ACE1ED522EC0052DA83 /* NewsTitlesView.swift */; };
@@ -51,7 +53,12 @@
 		188B0BE91EE4E9380071DC31 /* HeadlineNewsTuiJianModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188B0BE81EE4E9380071DC31 /* HeadlineNewsTuiJianModel.swift */; };
 		188B0BEB1EE542B30071DC31 /* HeadlineNesHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188B0BEA1EE542B30071DC31 /* HeadlineNesHeaderView.swift */; };
 		188B0BED1EE551EF0071DC31 /* NewsBaseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188B0BEC1EE551EF0071DC31 /* NewsBaseDetailViewController.swift */; };
+		189E8C4B1F0A2B11006FD9C1 /* CFDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189E8C4A1F0A2B11006FD9C1 /* CFDataBase.swift */; };
+		18EFBDB71F0E27FE00C9AFF0 /* refresh_image.gif in Resources */ = {isa = PBXBuildFile; fileRef = 18EFBDB61F0E27FE00C9AFF0 /* refresh_image.gif */; };
+		18EFBDBA1F0E343B00C9AFF0 /* BehaviorImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBDB91F0E343B00C9AFF0 /* BehaviorImageView.swift */; };
 		18F0D5001EE68A7A008CE59F /* CFRefreshNormalFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F0D4FF1EE68A7A008CE59F /* CFRefreshNormalFooter.swift */; };
+		18F3E22A1F0B7CB100DB0346 /* TheChainOfGrammarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F3E2291F0B7CB100DB0346 /* TheChainOfGrammarViewController.swift */; };
+		18F3E22D1F0B7D3F00DB0346 /* TheChainOfGrammar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F3E22C1F0B7D3F00DB0346 /* TheChainOfGrammar.swift */; };
 		18F67F721ECE920100CCAD8E /* MainInterfaceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F67F711ECE920100CCAD8E /* MainInterfaceCollectionViewCell.swift */; };
 		18F67F791ECE975200CCAD8E /* WheelPlayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F67F771ECE975200CCAD8E /* WheelPlayCollectionViewCell.swift */; };
 		18F67F7A1ECE975200CCAD8E /* WheelPlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F67F781ECE975200CCAD8E /* WheelPlayView.swift */; };
@@ -109,6 +116,8 @@
 		1829A38A1EE7CBAA00C81716 /* NewsBaseStyle3TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsBaseStyle3TableViewCell.swift; sourceTree = "<group>"; };
 		1829A38B1EE7CBAA00C81716 /* NewsBaseStyle3TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsBaseStyle3TableViewCell.xib; sourceTree = "<group>"; };
 		1829A3951EE7D4CF00C81716 /* QRCodeCreatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeCreatViewController.swift; sourceTree = "<group>"; };
+		182EA6F31EEFE02400F06F29 /* NationalGeographyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NationalGeographyViewController.swift; sourceTree = "<group>"; };
+		182EA6F51EEFE07F00F06F29 /* NationalGeographyViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NationalGeographyViewModel.swift; sourceTree = "<group>"; };
 		183187311ED3D73200937BF1 /* NewsMainInterfaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsMainInterfaceViewController.swift; sourceTree = "<group>"; };
 		183187351ED3DA2900937BF1 /* NewsTitlesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTitlesCollectionViewCell.swift; sourceTree = "<group>"; };
 		18360ACE1ED522EC0052DA83 /* NewsTitlesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTitlesView.swift; sourceTree = "<group>"; };
@@ -142,7 +151,12 @@
 		188B0BE81EE4E9380071DC31 /* HeadlineNewsTuiJianModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadlineNewsTuiJianModel.swift; sourceTree = "<group>"; };
 		188B0BEA1EE542B30071DC31 /* HeadlineNesHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadlineNesHeaderView.swift; sourceTree = "<group>"; };
 		188B0BEC1EE551EF0071DC31 /* NewsBaseDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsBaseDetailViewController.swift; sourceTree = "<group>"; };
+		189E8C4A1F0A2B11006FD9C1 /* CFDataBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFDataBase.swift; sourceTree = "<group>"; };
+		18EFBDB61F0E27FE00C9AFF0 /* refresh_image.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = refresh_image.gif; sourceTree = "<group>"; };
+		18EFBDB91F0E343B00C9AFF0 /* BehaviorImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BehaviorImageView.swift; sourceTree = "<group>"; };
 		18F0D4FF1EE68A7A008CE59F /* CFRefreshNormalFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFRefreshNormalFooter.swift; sourceTree = "<group>"; };
+		18F3E2291F0B7CB100DB0346 /* TheChainOfGrammarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheChainOfGrammarViewController.swift; sourceTree = "<group>"; };
+		18F3E22C1F0B7D3F00DB0346 /* TheChainOfGrammar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheChainOfGrammar.swift; sourceTree = "<group>"; };
 		18F67F711ECE920100CCAD8E /* MainInterfaceCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainInterfaceCollectionViewCell.swift; sourceTree = "<group>"; };
 		18F67F771ECE975200CCAD8E /* WheelPlayCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WheelPlayCollectionViewCell.swift; sourceTree = "<group>"; };
 		18F67F781ECE975200CCAD8E /* WheelPlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WheelPlayView.swift; sourceTree = "<group>"; };
@@ -309,6 +323,47 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		182EA6EE1EEFDFF600F06F29 /* NationalGeography */ = {
+			isa = PBXGroup;
+			children = (
+				182EA6EF1EEFDFF600F06F29 /* Controller */,
+				182EA6F01EEFDFF600F06F29 /* Model */,
+				182EA6F11EEFDFF600F06F29 /* View */,
+				182EA6F21EEFDFF600F06F29 /* ViewModel */,
+			);
+			path = NationalGeography;
+			sourceTree = "<group>";
+		};
+		182EA6EF1EEFDFF600F06F29 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				182EA6F31EEFE02400F06F29 /* NationalGeographyViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		182EA6F01EEFDFF600F06F29 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		182EA6F11EEFDFF600F06F29 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		182EA6F21EEFDFF600F06F29 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				182EA6F51EEFE07F00F06F29 /* NationalGeographyViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		1831872C1ED3D71D00937BF1 /* News */ = {
 			isa = PBXGroup;
 			children = (
@@ -473,12 +528,15 @@
 				1829A38E1EE7D49500C81716 /* QRCodeCreatAndScan */,
 				180C1A091EE933F6003EC130 /* CustomVideoPlayer */,
 				18822B4D1EEA86E900455340 /* CubeRotation */,
+				182EA6EE1EEFDFF600F06F29 /* NationalGeography */,
+				18F3E2271F0B7C5000DB0346 /* TheChainOfGrammar */,
 				186C60DA1ECC0F91008C8D49 /* Main.storyboard */,
 				183A371F1ECD4F380028D9B3 /* MacroDefine.swift */,
 				183A37231ECD6FAA0028D9B3 /* FontsizeToFitSubclass.swift */,
 				183A37211ECD53430028D9B3 /* Extensions.swift */,
 				186C60DD1ECC0F91008C8D49 /* Assets.xcassets */,
 				186C60DF1ECC0F91008C8D49 /* LaunchScreen.storyboard */,
+				18EFBDB61F0E27FE00C9AFF0 /* refresh_image.gif */,
 				186C60E21ECC0F91008C8D49 /* Info.plist */,
 				18F67F901ECEA11B00CCAD8E /* AVarietyOfDemoCollection-Bridging-Header.h */,
 			);
@@ -560,6 +618,40 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		18EFBDB81F0E341A00C9AFF0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				18EFBDB91F0E343B00C9AFF0 /* BehaviorImageView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		18F3E2271F0B7C5000DB0346 /* TheChainOfGrammar */ = {
+			isa = PBXGroup;
+			children = (
+				18EFBDB81F0E341A00C9AFF0 /* View */,
+				18F3E22B1F0B7D2C00DB0346 /* Model */,
+				18F3E2281F0B7C5000DB0346 /* Controller */,
+			);
+			path = TheChainOfGrammar;
+			sourceTree = "<group>";
+		};
+		18F3E2281F0B7C5000DB0346 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18F3E2291F0B7CB100DB0346 /* TheChainOfGrammarViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		18F3E22B1F0B7D2C00DB0346 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				18F3E22C1F0B7D3F00DB0346 /* TheChainOfGrammar.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		18F67F731ECE971800CCAD8E /* MainInterface */ = {
 			isa = PBXGroup;
 			children = (
@@ -611,6 +703,7 @@
 				18F67F7F1ECE9CD100CCAD8E /* CFDiskCache.swift */,
 				18F67F801ECE9CD100CCAD8E /* CFNetWorkCache.swift */,
 				18F67F941ECEA1A400CCAD8E /* CFNetManager.swift */,
+				189E8C4A1F0A2B11006FD9C1 /* CFDataBase.swift */,
 				18822B421EEA482F00455340 /* LoadingViewManager.swift */,
 				18F67F811ECE9CD100CCAD8E /* HttpNetManager.swift */,
 			);
@@ -784,6 +877,7 @@
 				186C60DE1ECC0F91008C8D49 /* Assets.xcassets in Resources */,
 				186C60DC1ECC0F91008C8D49 /* Main.storyboard in Resources */,
 				180C1A1C1EE933F6003EC130 /* CustomVideoPlayerView.xib in Resources */,
+				18EFBDB71F0E27FE00C9AFF0 /* refresh_image.gif in Resources */,
 				1829A38D1EE7CBAA00C81716 /* NewsBaseStyle3TableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -968,6 +1062,7 @@
 				18360AE31ED52E7E0052DA83 /* HeadlineNewsViewModel.swift in Sources */,
 				180C1A261EE93717003EC130 /* SmileLoadingView.swift in Sources */,
 				18360ADD1ED52D890052DA83 /* NewsBaseViewController.swift in Sources */,
+				182EA6F41EEFE02400F06F29 /* NationalGeographyViewController.swift in Sources */,
 				18F67F951ECEA1A400CCAD8E /* CFNetManager.swift in Sources */,
 				180C1A181EE933F6003EC130 /* CustomVideoPlayerModel.swift in Sources */,
 				18822B4A1EEA734800455340 /* PhotographyNewsViewController.swift in Sources */,
@@ -976,6 +1071,8 @@
 				18360AE51ED52F190052DA83 /* NewsBaseViewModel.swift in Sources */,
 				18F67F8B1ECE9CD100CCAD8E /* CFRefreshHeader.swift in Sources */,
 				188B0BE91EE4E9380071DC31 /* HeadlineNewsTuiJianModel.swift in Sources */,
+				18F3E22D1F0B7D3F00DB0346 /* TheChainOfGrammar.swift in Sources */,
+				18EFBDBA1F0E343B00C9AFF0 /* BehaviorImageView.swift in Sources */,
 				18360AE71ED5318E0052DA83 /* HeadlineNewsPicModel.swift in Sources */,
 				180C1A251EE93717003EC130 /* LoadingView.swift in Sources */,
 				18F67F9C1ECEE9F300CCAD8E /* MainInterfaceHeaderViewModel.swift in Sources */,
@@ -991,9 +1088,12 @@
 				183A37201ECD4F380028D9B3 /* MacroDefine.swift in Sources */,
 				18F67F7A1ECE975200CCAD8E /* WheelPlayView.swift in Sources */,
 				18360AE11ED52DC10052DA83 /* HeadlineNewsViewController.swift in Sources */,
+				189E8C4B1F0A2B11006FD9C1 /* CFDataBase.swift in Sources */,
+				18F3E22A1F0B7CB100DB0346 /* TheChainOfGrammarViewController.swift in Sources */,
 				18F67F721ECE920100CCAD8E /* MainInterfaceCollectionViewCell.swift in Sources */,
 				183A37241ECD6FAA0028D9B3 /* FontsizeToFitSubclass.swift in Sources */,
 				183A37221ECD53430028D9B3 /* Extensions.swift in Sources */,
+				182EA6F61EEFE07F00F06F29 /* NationalGeographyViewModel.swift in Sources */,
 				18F67F8C1ECE9CD100CCAD8E /* CFRefreshNormalHeader.swift in Sources */,
 				18F67F7C1ECE9C8E00CCAD8E /* MainInterfaceViewModel.swift in Sources */,
 			);

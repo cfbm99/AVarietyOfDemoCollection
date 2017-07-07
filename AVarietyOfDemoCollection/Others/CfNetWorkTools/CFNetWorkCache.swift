@@ -10,7 +10,7 @@ import UIKit
 
 struct CFNetWorkCache {
     
-    fileprivate let cfDickCache = CFDiskCache(path: "CFResponseCache.sqlite")
+    fileprivate let cfDickCache = CFDataBase(filePath: "cfCache")
     fileprivate let memoryCache = NSCache<AnyObject, AnyObject>()
     
     public func httpCacheForKey(key: String?) -> Data? {
@@ -32,9 +32,7 @@ struct CFNetWorkCache {
     }
     
     fileprivate func saveHttpCacheToDisk(key: String, value: Data) {
-        if cfDickCache.insertDataToDist(key: key, size: value.count, data: value) {
-            print("save cuccess")
-        }
+        cfDickCache.insertData(name: key, data: value)
     }
     
     fileprivate func saveHttpCacheToMemory(key: String, value: Data) {
@@ -46,7 +44,7 @@ struct CFNetWorkCache {
     }
     
     fileprivate func getHttpCacheFromDisk(key: String) -> Data? {
-        guard let item = cfDickCache.getDbItem(key: key) else { return nil }
+        guard let item = cfDickCache.getItem(name: key) else { return nil }
         return item.data
     }
 

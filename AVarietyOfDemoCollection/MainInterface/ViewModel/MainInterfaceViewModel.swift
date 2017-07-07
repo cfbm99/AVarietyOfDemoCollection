@@ -10,6 +10,9 @@ import UIKit
 import SwiftyJSON
 
 class MainInterfaceViewModel: NSObject, ViewModelProtocol {
+    var isPulldown: Bool = false
+    var nowPage: Int = 1
+    var needCache: Bool = false
     
     dynamic var requestMsg: RequestMsg = .fail
 

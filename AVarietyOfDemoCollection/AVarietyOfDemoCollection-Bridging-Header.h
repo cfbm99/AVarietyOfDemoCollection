@@ -5,3 +5,4 @@
 
 #import "SQLite3.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import <SDWebImage/UIImage+GIF.h>
