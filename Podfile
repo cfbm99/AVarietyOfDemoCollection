@@ -13,6 +13,7 @@ target 'AVarietyOfDemoCollection' do
   pod 'ReactiveCocoa'
   pod 'SQLite.swift'
   pod 'ReachabilitySwift'
+  pod 'MJRefresh'
 
   target 'AVarietyOfDemoCollectionTests' do
     inherit! :search_paths

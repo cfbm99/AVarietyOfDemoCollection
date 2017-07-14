@@ -27,7 +27,8 @@ class CustomVideoPlayerViewModel: NewsBaseViewModel, ViewModelProtocol {
                     self.vedioModels.removeAll()
                 }
                 if let dataArray = dataArray {
-                    self.vedioModels.append(contentsOf: dataArray.map{ CustomVideoPlayerModel.init(dic: $0) })
+                    let models = dataArray.map({ CustomVideoPlayerModel.init(dic: $0) })
+                    self.vedioModels += models
                 }
                 self.pulldownRefreshMsg = msg
             })

@@ -36,9 +36,10 @@
 		18360AE31ED52E7E0052DA83 /* HeadlineNewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18360AE21ED52E7E0052DA83 /* HeadlineNewsViewModel.swift */; };
 		18360AE51ED52F190052DA83 /* NewsBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18360AE41ED52F190052DA83 /* NewsBaseViewModel.swift */; };
 		18360AE71ED5318E0052DA83 /* HeadlineNewsPicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18360AE61ED5318E0052DA83 /* HeadlineNewsPicModel.swift */; };
-		183A37201ECD4F380028D9B3 /* MacroDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A371F1ECD4F380028D9B3 /* MacroDefine.swift */; };
-		183A37221ECD53430028D9B3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A37211ECD53430028D9B3 /* Extensions.swift */; };
-		183A37241ECD6FAA0028D9B3 /* FontsizeToFitSubclass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A37231ECD6FAA0028D9B3 /* FontsizeToFitSubclass.swift */; };
+		184F9EBE1F1864F50076BEF8 /* NationalGeographyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184F9EBD1F1864F50076BEF8 /* NationalGeographyTableViewCell.swift */; };
+		184F9EC01F1865450076BEF8 /* NationalGeographyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184F9EBF1F1865450076BEF8 /* NationalGeographyCollectionViewCell.swift */; };
+		184F9EC21F189F5B0076BEF8 /* NationalGeographyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184F9EC11F189F5B0076BEF8 /* NationalGeographyDetailViewController.swift */; };
+		184F9ECC1F18B3A50076BEF8 /* NationalGeographyPicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184F9ECB1F18B3A50076BEF8 /* NationalGeographyPicView.swift */; };
 		186C60D71ECC0F91008C8D49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186C60D61ECC0F91008C8D49 /* AppDelegate.swift */; };
 		186C60D91ECC0F91008C8D49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186C60D81ECC0F91008C8D49 /* ViewController.swift */; };
 		186C60DC1ECC0F91008C8D49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 186C60DA1ECC0F91008C8D49 /* Main.storyboard */; };
@@ -54,9 +55,14 @@
 		188B0BEB1EE542B30071DC31 /* HeadlineNesHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188B0BEA1EE542B30071DC31 /* HeadlineNesHeaderView.swift */; };
 		188B0BED1EE551EF0071DC31 /* NewsBaseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188B0BEC1EE551EF0071DC31 /* NewsBaseDetailViewController.swift */; };
 		189E8C4B1F0A2B11006FD9C1 /* CFDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189E8C4A1F0A2B11006FD9C1 /* CFDataBase.swift */; };
-		18EFBDB71F0E27FE00C9AFF0 /* refresh_image.gif in Resources */ = {isa = PBXBuildFile; fileRef = 18EFBDB61F0E27FE00C9AFF0 /* refresh_image.gif */; };
+		18BB94BC1F0F226700D3FFE2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BB94B91F0F226700D3FFE2 /* Extensions.swift */; };
+		18BB94BD1F0F226700D3FFE2 /* FontsizeToFitSubclass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BB94BA1F0F226700D3FFE2 /* FontsizeToFitSubclass.swift */; };
+		18BB94BE1F0F226700D3FFE2 /* MacroDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BB94BB1F0F226700D3FFE2 /* MacroDefine.swift */; };
+		18BB94C11F0F24DD00D3FFE2 /* CFArrowRefreshHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BB94C01F0F24DD00D3FFE2 /* CFArrowRefreshHeader.swift */; };
+		18BB94C31F0F548D00D3FFE2 /* UIDynamicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BB94C21F0F548D00D3FFE2 /* UIDynamicViewController.swift */; };
 		18EFBDBA1F0E343B00C9AFF0 /* BehaviorImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBDB91F0E343B00C9AFF0 /* BehaviorImageView.swift */; };
 		18F0D5001EE68A7A008CE59F /* CFRefreshNormalFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F0D4FF1EE68A7A008CE59F /* CFRefreshNormalFooter.swift */; };
+		18F23FD11F14C9C500761A4D /* NationalGeographyAlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F23FD01F14C9C500761A4D /* NationalGeographyAlbumModel.swift */; };
 		18F3E22A1F0B7CB100DB0346 /* TheChainOfGrammarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F3E2291F0B7CB100DB0346 /* TheChainOfGrammarViewController.swift */; };
 		18F3E22D1F0B7D3F00DB0346 /* TheChainOfGrammar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F3E22C1F0B7D3F00DB0346 /* TheChainOfGrammar.swift */; };
 		18F67F721ECE920100CCAD8E /* MainInterfaceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F67F711ECE920100CCAD8E /* MainInterfaceCollectionViewCell.swift */; };
@@ -128,9 +134,10 @@
 		18360AE21ED52E7E0052DA83 /* HeadlineNewsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadlineNewsViewModel.swift; sourceTree = "<group>"; };
 		18360AE41ED52F190052DA83 /* NewsBaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsBaseViewModel.swift; sourceTree = "<group>"; };
 		18360AE61ED5318E0052DA83 /* HeadlineNewsPicModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadlineNewsPicModel.swift; sourceTree = "<group>"; };
-		183A371F1ECD4F380028D9B3 /* MacroDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacroDefine.swift; sourceTree = "<group>"; };
-		183A37211ECD53430028D9B3 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		183A37231ECD6FAA0028D9B3 /* FontsizeToFitSubclass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontsizeToFitSubclass.swift; sourceTree = "<group>"; };
+		184F9EBD1F1864F50076BEF8 /* NationalGeographyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NationalGeographyTableViewCell.swift; sourceTree = "<group>"; };
+		184F9EBF1F1865450076BEF8 /* NationalGeographyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NationalGeographyCollectionViewCell.swift; sourceTree = "<group>"; };
+		184F9EC11F189F5B0076BEF8 /* NationalGeographyDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NationalGeographyDetailViewController.swift; sourceTree = "<group>"; };
+		184F9ECB1F18B3A50076BEF8 /* NationalGeographyPicView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NationalGeographyPicView.swift; sourceTree = "<group>"; };
 		186C60D31ECC0F91008C8D49 /* AVarietyOfDemoCollection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVarietyOfDemoCollection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		186C60D61ECC0F91008C8D49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		186C60D81ECC0F91008C8D49 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -152,9 +159,14 @@
 		188B0BEA1EE542B30071DC31 /* HeadlineNesHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadlineNesHeaderView.swift; sourceTree = "<group>"; };
 		188B0BEC1EE551EF0071DC31 /* NewsBaseDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsBaseDetailViewController.swift; sourceTree = "<group>"; };
 		189E8C4A1F0A2B11006FD9C1 /* CFDataBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFDataBase.swift; sourceTree = "<group>"; };
-		18EFBDB61F0E27FE00C9AFF0 /* refresh_image.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = refresh_image.gif; sourceTree = "<group>"; };
+		18BB94B91F0F226700D3FFE2 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		18BB94BA1F0F226700D3FFE2 /* FontsizeToFitSubclass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontsizeToFitSubclass.swift; sourceTree = "<group>"; };
+		18BB94BB1F0F226700D3FFE2 /* MacroDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacroDefine.swift; sourceTree = "<group>"; };
+		18BB94C01F0F24DD00D3FFE2 /* CFArrowRefreshHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFArrowRefreshHeader.swift; sourceTree = "<group>"; };
+		18BB94C21F0F548D00D3FFE2 /* UIDynamicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDynamicViewController.swift; sourceTree = "<group>"; };
 		18EFBDB91F0E343B00C9AFF0 /* BehaviorImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BehaviorImageView.swift; sourceTree = "<group>"; };
 		18F0D4FF1EE68A7A008CE59F /* CFRefreshNormalFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFRefreshNormalFooter.swift; sourceTree = "<group>"; };
+		18F23FD01F14C9C500761A4D /* NationalGeographyAlbumModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NationalGeographyAlbumModel.swift; sourceTree = "<group>"; };
 		18F3E2291F0B7CB100DB0346 /* TheChainOfGrammarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheChainOfGrammarViewController.swift; sourceTree = "<group>"; };
 		18F3E22C1F0B7D3F00DB0346 /* TheChainOfGrammar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheChainOfGrammar.swift; sourceTree = "<group>"; };
 		18F67F711ECE920100CCAD8E /* MainInterfaceCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainInterfaceCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -338,6 +350,7 @@
 			isa = PBXGroup;
 			children = (
 				182EA6F31EEFE02400F06F29 /* NationalGeographyViewController.swift */,
+				184F9EC11F189F5B0076BEF8 /* NationalGeographyDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -345,6 +358,7 @@
 		182EA6F01EEFDFF600F06F29 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				18F23FD01F14C9C500761A4D /* NationalGeographyAlbumModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -352,6 +366,9 @@
 		182EA6F11EEFDFF600F06F29 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				184F9EBD1F1864F50076BEF8 /* NationalGeographyTableViewCell.swift */,
+				184F9EBF1F1865450076BEF8 /* NationalGeographyCollectionViewCell.swift */,
+				184F9ECB1F18B3A50076BEF8 /* NationalGeographyPicView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -530,13 +547,10 @@
 				18822B4D1EEA86E900455340 /* CubeRotation */,
 				182EA6EE1EEFDFF600F06F29 /* NationalGeography */,
 				18F3E2271F0B7C5000DB0346 /* TheChainOfGrammar */,
+				18BB94B61F0F221B00D3FFE2 /* UIDynamic */,
 				186C60DA1ECC0F91008C8D49 /* Main.storyboard */,
-				183A371F1ECD4F380028D9B3 /* MacroDefine.swift */,
-				183A37231ECD6FAA0028D9B3 /* FontsizeToFitSubclass.swift */,
-				183A37211ECD53430028D9B3 /* Extensions.swift */,
 				186C60DD1ECC0F91008C8D49 /* Assets.xcassets */,
 				186C60DF1ECC0F91008C8D49 /* LaunchScreen.storyboard */,
-				18EFBDB61F0E27FE00C9AFF0 /* refresh_image.gif */,
 				186C60E21ECC0F91008C8D49 /* Info.plist */,
 				18F67F901ECEA11B00CCAD8E /* AVarietyOfDemoCollection-Bridging-Header.h */,
 			);
@@ -618,6 +632,38 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		18BB94B61F0F221B00D3FFE2 /* UIDynamic */ = {
+			isa = PBXGroup;
+			children = (
+				18BB94B71F0F221B00D3FFE2 /* Controller */,
+				18BB94B81F0F221B00D3FFE2 /* View */,
+			);
+			path = UIDynamic;
+			sourceTree = "<group>";
+		};
+		18BB94B71F0F221B00D3FFE2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18BB94C21F0F548D00D3FFE2 /* UIDynamicViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		18BB94B81F0F221B00D3FFE2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		18BB94BF1F0F235A00D3FFE2 /* DIYMJRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				18BB94C01F0F24DD00D3FFE2 /* CFArrowRefreshHeader.swift */,
+			);
+			path = DIYMJRefresh;
+			sourceTree = "<group>";
+		};
 		18EFBDB81F0E341A00C9AFF0 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -690,9 +736,13 @@
 		18F67F7D1ECE9CD100CCAD8E /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				18BB94B91F0F226700D3FFE2 /* Extensions.swift */,
+				18BB94BA1F0F226700D3FFE2 /* FontsizeToFitSubclass.swift */,
+				18BB94BB1F0F226700D3FFE2 /* MacroDefine.swift */,
 				18F67F7E1ECE9CD100CCAD8E /* CfNetWorkTools */,
 				18F67F821ECE9CD100CCAD8E /* CfRefresh */,
 				180C1A1E1EE93717003EC130 /* LoadingAnimations */,
+				18BB94BF1F0F235A00D3FFE2 /* DIYMJRefresh */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -877,7 +927,6 @@
 				186C60DE1ECC0F91008C8D49 /* Assets.xcassets in Resources */,
 				186C60DC1ECC0F91008C8D49 /* Main.storyboard in Resources */,
 				180C1A1C1EE933F6003EC130 /* CustomVideoPlayerView.xib in Resources */,
-				18EFBDB71F0E27FE00C9AFF0 /* refresh_image.gif in Resources */,
 				1829A38D1EE7CBAA00C81716 /* NewsBaseStyle3TableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1041,12 +1090,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				184F9EC21F189F5B0076BEF8 /* NationalGeographyDetailViewController.swift in Sources */,
 				180C1A1B1EE933F6003EC130 /* CustomVideoPlayerView.swift in Sources */,
 				18F67F871ECE9CD100CCAD8E /* CFDiskCache.swift in Sources */,
+				18BB94C31F0F548D00D3FFE2 /* UIDynamicViewController.swift in Sources */,
 				18F67F8A1ECE9CD100CCAD8E /* CFRefreshComponent.swift in Sources */,
 				183187321ED3D73200937BF1 /* NewsMainInterfaceViewController.swift in Sources */,
+				18BB94BD1F0F226700D3FFE2 /* FontsizeToFitSubclass.swift in Sources */,
 				188B0BED1EE551EF0071DC31 /* NewsBaseDetailViewController.swift in Sources */,
 				180C1A1A1EE933F6003EC130 /* CustomVideoPlayerTableViewCell.swift in Sources */,
+				18F23FD11F14C9C500761A4D /* NationalGeographyAlbumModel.swift in Sources */,
 				1829A38C1EE7CBAA00C81716 /* NewsBaseStyle3TableViewCell.swift in Sources */,
 				18044DA51EE15E9F0051EB42 /* NewsBaseStyle2TableViewCell.swift in Sources */,
 				180C1A161EE933F6003EC130 /* CustomVideoPlayerViewController.swift in Sources */,
@@ -1057,6 +1110,8 @@
 				18822B431EEA482F00455340 /* LoadingViewManager.swift in Sources */,
 				186C60D71ECC0F91008C8D49 /* AppDelegate.swift in Sources */,
 				180C1A171EE933F6003EC130 /* CustomVideoModel.swift in Sources */,
+				18BB94C11F0F24DD00D3FFE2 /* CFArrowRefreshHeader.swift in Sources */,
+				184F9EBE1F1864F50076BEF8 /* NationalGeographyTableViewCell.swift in Sources */,
 				18822B501EEA870900455340 /* CubeRotationViewController.swift in Sources */,
 				183187361ED3DA2900937BF1 /* NewsTitlesCollectionViewCell.swift in Sources */,
 				18360AE31ED52E7E0052DA83 /* HeadlineNewsViewModel.swift in Sources */,
@@ -1068,8 +1123,11 @@
 				18822B4A1EEA734800455340 /* PhotographyNewsViewController.swift in Sources */,
 				18822B4C1EEA738300455340 /* PhotographyNewsViewModel.swift in Sources */,
 				188B0BEB1EE542B30071DC31 /* HeadlineNesHeaderView.swift in Sources */,
+				18BB94BC1F0F226700D3FFE2 /* Extensions.swift in Sources */,
 				18360AE51ED52F190052DA83 /* NewsBaseViewModel.swift in Sources */,
 				18F67F8B1ECE9CD100CCAD8E /* CFRefreshHeader.swift in Sources */,
+				184F9EC01F1865450076BEF8 /* NationalGeographyCollectionViewCell.swift in Sources */,
+				18BB94BE1F0F226700D3FFE2 /* MacroDefine.swift in Sources */,
 				188B0BE91EE4E9380071DC31 /* HeadlineNewsTuiJianModel.swift in Sources */,
 				18F3E22D1F0B7D3F00DB0346 /* TheChainOfGrammar.swift in Sources */,
 				18EFBDBA1F0E343B00C9AFF0 /* BehaviorImageView.swift in Sources */,
@@ -1085,14 +1143,12 @@
 				18F67F791ECE975200CCAD8E /* WheelPlayCollectionViewCell.swift in Sources */,
 				18F67F891ECE9CD100CCAD8E /* HttpNetManager.swift in Sources */,
 				180C1A1D1EE933F6003EC130 /* CustomVideoPlayerViewModel.swift in Sources */,
-				183A37201ECD4F380028D9B3 /* MacroDefine.swift in Sources */,
 				18F67F7A1ECE975200CCAD8E /* WheelPlayView.swift in Sources */,
 				18360AE11ED52DC10052DA83 /* HeadlineNewsViewController.swift in Sources */,
+				184F9ECC1F18B3A50076BEF8 /* NationalGeographyPicView.swift in Sources */,
 				189E8C4B1F0A2B11006FD9C1 /* CFDataBase.swift in Sources */,
 				18F3E22A1F0B7CB100DB0346 /* TheChainOfGrammarViewController.swift in Sources */,
 				18F67F721ECE920100CCAD8E /* MainInterfaceCollectionViewCell.swift in Sources */,
-				183A37241ECD6FAA0028D9B3 /* FontsizeToFitSubclass.swift in Sources */,
-				183A37221ECD53430028D9B3 /* Extensions.swift in Sources */,
 				182EA6F61EEFE07F00F06F29 /* NationalGeographyViewModel.swift in Sources */,
 				18F67F8C1ECE9CD100CCAD8E /* CFRefreshNormalHeader.swift in Sources */,
 				18F67F7C1ECE9C8E00CCAD8E /* MainInterfaceViewModel.swift in Sources */,
@@ -1252,11 +1308,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = W7F3KWK7XH;
 				INFOPLIST_FILE = AVarietyOfDemoCollection/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cfdemo.AVarietyOfDemoCollection;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "AVarietyOfDemoCollection/AVarietyOfDemoCollection-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -1270,11 +1329,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = W7F3KWK7XH;
 				INFOPLIST_FILE = AVarietyOfDemoCollection/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cfdemo.AVarietyOfDemoCollection;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "AVarietyOfDemoCollection/AVarietyOfDemoCollection-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};

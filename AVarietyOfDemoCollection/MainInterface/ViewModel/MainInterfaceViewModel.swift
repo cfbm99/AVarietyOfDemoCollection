@@ -25,8 +25,8 @@ class MainInterfaceViewModel: NSObject, ViewModelProtocol {
             CFNetManager.manager.get(url: String.init(format: "http://dili.bdatu.com/jiekou/albums/a%@.html", albumModel.id), success: { (data2) in
                 guard let pictures = JSON(data2)["picture"].arrayObject as? [[String : Any]] else { return }
                 self.finishRequest(dicArray: pictures, complete: { (dics, msg) in
-                    if let dics = dics {
-                        self.headerViewsModels = dics.map{MainInterfaceHeaderImageModel.init(dic: $0)}
+                    if let _ = dics {
+                        self.headerViewsModels = pictures.map{MainInterfaceHeaderImageModel.init(dic: $0)}
                     }
                     self.requestMsg = msg
                 })

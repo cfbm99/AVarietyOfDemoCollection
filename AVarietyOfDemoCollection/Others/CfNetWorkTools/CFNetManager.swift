@@ -52,7 +52,7 @@ extension CFNetManager {
         Alamofire.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).response { (response) in
             if let error = response.error {
                 print(error.localizedDescription)
-                if self.netWorkState == .notReach {
+                if !self.isReachable() {
                     print("断网啦")
                 }
                 fail?(error)
@@ -90,8 +90,23 @@ extension CFNetManager {
         }
     }
     
-    func get(by url: String, cache: ((Data) -> Void)? = nil, success: ((Data) -> Void)?, fail: ((String) -> Void)?) {
-        
+    public func get(by url: String, cache: ((Data) -> Void)?, success: ((Data) -> Void)?, fail: ((String) -> Void)?) {
+        if let data = cfNetWorkCache.httpCacheForKey(key: url) {
+            cache?(data)
+        }
+        Alamofire.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).response { (response) in
+            if let error = response.error {
+                print(error.localizedDescription)
+                if !self.isReachable() {
+                    print("断网啦")
+                }
+                fail?(error.localizedDescription)
+            } else {
+                if let data = response.data {
+                    success?(data)
+                }
+            }
+        }
     }
     
     func post(url: String, parms: [String : Any]? = nil, needCache: Bool, updateCache: Bool, success: ((Data) -> Void)?, fail: ((Error) -> Void)?) {

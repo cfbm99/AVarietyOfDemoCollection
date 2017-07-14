@@ -38,7 +38,7 @@ class PhotographyNewsViewController: NewsBaseViewController {
         tableV.delegate = self
         tableV.dataSource = self
         addKvo()
-        tableV.cf_header = CFRefreshNormalHeader(refreshClosure: { [weak self] in
+        tableV.mj_header = CFArrowRefreshHeader(refreshingBlock: { [weak self] in
             self?.viewModel.isPulldown = true
             self?.viewModel.getList()
         })
@@ -46,7 +46,7 @@ class PhotographyNewsViewController: NewsBaseViewController {
             self?.viewModel.isPulldown = false
             self?.viewModel.getList()
         })
-        tableV.cf_header?.beginRefresh()
+        tableV.mj_header?.beginRefreshing()
     }
 
     override func didReceiveMemoryWarning() {

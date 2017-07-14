@@ -1,15 +1,15 @@
 //
-//  TheChainOfGrammarViewController.swift
+//  UIDynamicViewController.swift
 //  AVarietyOfDemoCollection
 //
-//  Created by Apple on 2017/7/4.
+//  Created by Apple on 2017/7/7.
 //  Copyright © 2017年 Apple. All rights reserved.
 //
 
 import UIKit
 
-class TheChainOfGrammarViewController: UIViewController {
-    
+class UIDynamicViewController: UIViewController {
+
     let behavior = UIDynamicBehavior()
     
     lazy var gravity: UIGravityBehavior = {
@@ -31,7 +31,7 @@ class TheChainOfGrammarViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         initializeInterface()
     }
@@ -54,10 +54,22 @@ class TheChainOfGrammarViewController: UIViewController {
         gravity.addItem(imageV)
         collision.addItem(imageV)
     }
-    
+
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
 
 }

@@ -20,6 +20,7 @@ class QRCodeCreatViewController: UIViewController {
     }
     
     func initializeInterface() {
+        title = "QRCode"
         textView.layer.borderWidth = 1
         textView.layer.borderColor = UIColor.lightGray.cgColor
     }

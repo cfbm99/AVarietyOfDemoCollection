@@ -45,7 +45,7 @@ class HeadlineNewsViewController: NewsBaseViewController {
             self.registerForPreviewing(with: self, sourceView: tableV)
         }
         
-        tableV.cf_header = CFRefreshNormalHeader(refreshClosure: { [weak self] in
+        tableV.mj_header = CFArrowRefreshHeader(refreshingBlock: { [weak self] in
             self?.viewModel.isPulldown = true
             self?.viewModel.getHeadlineNews()
         })
@@ -53,7 +53,7 @@ class HeadlineNewsViewController: NewsBaseViewController {
             self?.viewModel.isPulldown = false
             self?.viewModel.getHeadlineNews()
         })
-        tableV.cf_header?.beginRefresh()
+        tableV.mj_header?.beginRefreshing()
     }
 
     override func didReceiveMemoryWarning() {

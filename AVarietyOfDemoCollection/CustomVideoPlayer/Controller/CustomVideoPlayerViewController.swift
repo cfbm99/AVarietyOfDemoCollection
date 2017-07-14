@@ -25,12 +25,16 @@ class CustomVideoPlayerViewController: UIViewController {
     }
     
     func initializeInterface() {
-        navigationController?.navigationBar.tintColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
         title = "视频"
         vedioTableView.estimatedRowHeight = 80;
         vedioTableView.rowHeight = UITableViewAutomaticDimension
         vedioTableView.separatorInset = UIEdgeInsetsMake(0, 10, 0, 10)
-        vedioTableView.cf_header = CFRefreshNormalHeader.init(refreshClosure: { [weak self] in
+
+        vedioTableView.cf_footer = CFRefreshNormalFooter(refreshClosure: { [weak self] in
+            self?.viewModel.isPulldown = false
+            self?.viewModel.requestVideos()
+        })
+        vedioTableView.mj_header = CFArrowRefreshHeader(refreshingBlock: { [weak self] in
             self?.viewModel.isPulldown = true
             self?.viewModel.requestVideos()
             if let _ = self?.avPlayerView.superview {
@@ -38,10 +42,6 @@ class CustomVideoPlayerViewController: UIViewController {
                 LoadingViewManager.manager.hideLoadingView()
             }
             self?.avPlayerView.removeObserver()
-        })
-        vedioTableView.cf_footer = CFRefreshNormalFooter(refreshClosure: { [weak self] in
-            self?.viewModel.isPulldown = false
-            self?.viewModel.requestVideos()
         })
         Addkvo()
         viewModel.requestVideos()
