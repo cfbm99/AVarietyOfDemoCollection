@@ -72,8 +72,8 @@ extension NationalGeographyViewController: UITableViewDataSource {
 extension NationalGeographyViewController: NationalGeographyTableViewCellDelegate {
     
     func didSelectCell(cell: NationalGeographyCollectionViewCell, albumModel: NationalGeographyAlbumModel, indexPath: IndexPath) {
-        let vc = NationalGeographyDetailViewController()
-        vc.nationalModelList = albumModel.picModel
+        let vc = CFPhotoBrowseViewController()
+        vc.imgUrls = albumModel.picModel.map({ $0.url })
         self.present(vc, animated: true, completion: nil)
     }
 }

@@ -80,6 +80,8 @@
 		18F67F9C1ECEE9F300CCAD8E /* MainInterfaceHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F67F9B1ECEE9F300CCAD8E /* MainInterfaceHeaderViewModel.swift */; };
 		7B316D5663D861D648F72086 /* Pods_AVarietyOfDemoCollectionUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D7E3913A1E2F9F184233BA1 /* Pods_AVarietyOfDemoCollectionUITests.framework */; };
 		E819ECEF1EE3F6FF00435684 /* NewsBaseListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E819ECEE1EE3F6FF00435684 /* NewsBaseListModel.swift */; };
+		E861D8E71F19B1F000BE0F47 /* CFPhotoBrowseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E861D8E61F19B1F000BE0F47 /* CFPhotoBrowseCollectionViewCell.swift */; };
+		E861D8E91F19B28C00BE0F47 /* CFPhotoBrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E861D8E81F19B28C00BE0F47 /* CFPhotoBrowseViewController.swift */; };
 		EFE119523D2C0CFE7479B7BA /* Pods_AVarietyOfDemoCollection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20D82935C782F8C4A80F6A02 /* Pods_AVarietyOfDemoCollection.framework */; };
 		F66AF964FD5E46F8322B5538 /* Pods_AVarietyOfDemoCollectionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31F349351D3DC6E97E222153 /* Pods_AVarietyOfDemoCollectionTests.framework */; };
 /* End PBXBuildFile section */
@@ -189,6 +191,8 @@
 		5D7E3913A1E2F9F184233BA1 /* Pods_AVarietyOfDemoCollectionUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AVarietyOfDemoCollectionUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C87082AC312CC3E6A9BFFE4 /* Pods-AVarietyOfDemoCollectionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVarietyOfDemoCollectionTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AVarietyOfDemoCollectionTests/Pods-AVarietyOfDemoCollectionTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E819ECEE1EE3F6FF00435684 /* NewsBaseListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsBaseListModel.swift; sourceTree = "<group>"; };
+		E861D8E61F19B1F000BE0F47 /* CFPhotoBrowseCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFPhotoBrowseCollectionViewCell.swift; sourceTree = "<group>"; };
+		E861D8E81F19B28C00BE0F47 /* CFPhotoBrowseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFPhotoBrowseViewController.swift; sourceTree = "<group>"; };
 		F1991D34EA8655FB14128DD0 /* Pods-AVarietyOfDemoCollectionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVarietyOfDemoCollectionTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AVarietyOfDemoCollectionTests/Pods-AVarietyOfDemoCollectionTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -351,6 +355,7 @@
 			children = (
 				182EA6F31EEFE02400F06F29 /* NationalGeographyViewController.swift */,
 				184F9EC11F189F5B0076BEF8 /* NationalGeographyDetailViewController.swift */,
+				E861D8E81F19B28C00BE0F47 /* CFPhotoBrowseViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -369,6 +374,7 @@
 				184F9EBD1F1864F50076BEF8 /* NationalGeographyTableViewCell.swift */,
 				184F9EBF1F1865450076BEF8 /* NationalGeographyCollectionViewCell.swift */,
 				184F9ECB1F18B3A50076BEF8 /* NationalGeographyPicView.swift */,
+				E861D8E61F19B1F000BE0F47 /* CFPhotoBrowseCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -984,9 +990,30 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AVarietyOfDemoCollection/Pods-AVarietyOfDemoCollection-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/ReachabilitySwift.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReachabilitySwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1014,13 +1041,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AVarietyOfDemoCollectionTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9530B69B009C5D50CEB64CC8 /* [CP] Copy Pods Resources */ = {
@@ -1044,13 +1074,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AVarietyOfDemoCollection-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B41A91F439F9EB8CB047BFFA /* [CP] Check Pods Manifest.lock */ = {
@@ -1059,13 +1092,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AVarietyOfDemoCollectionUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EAD4D0A39375B8B5A073D5FA /* [CP] Copy Pods Resources */ = {
@@ -1090,6 +1126,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E861D8E91F19B28C00BE0F47 /* CFPhotoBrowseViewController.swift in Sources */,
 				184F9EC21F189F5B0076BEF8 /* NationalGeographyDetailViewController.swift in Sources */,
 				180C1A1B1EE933F6003EC130 /* CustomVideoPlayerView.swift in Sources */,
 				18F67F871ECE9CD100CCAD8E /* CFDiskCache.swift in Sources */,
@@ -1111,6 +1148,7 @@
 				186C60D71ECC0F91008C8D49 /* AppDelegate.swift in Sources */,
 				180C1A171EE933F6003EC130 /* CustomVideoModel.swift in Sources */,
 				18BB94C11F0F24DD00D3FFE2 /* CFArrowRefreshHeader.swift in Sources */,
+				E861D8E71F19B1F000BE0F47 /* CFPhotoBrowseCollectionViewCell.swift in Sources */,
 				184F9EBE1F1864F50076BEF8 /* NationalGeographyTableViewCell.swift in Sources */,
 				18822B501EEA870900455340 /* CubeRotationViewController.swift in Sources */,
 				183187361ED3DA2900937BF1 /* NewsTitlesCollectionViewCell.swift in Sources */,
