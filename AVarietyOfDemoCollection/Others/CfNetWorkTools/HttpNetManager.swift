@@ -62,6 +62,23 @@ class HttpNetManager: NSObject {
         
     }
     
+    func requestWithGet(by url: String, cache: ((Data) -> Void)?, success: ((Data) -> Void)?, fail: ((Error) -> Void)?) {
+        if let data = cfNetWorkCache.httpCacheForKey(key: url) {
+            cache?(data)
+        }
+        Alamofire.request(url, method: .get, parameters: nil).response { (response) in
+            if let error = response.error {
+                print(error.localizedDescription)
+                fail?(error)
+            } else {
+                if let receiveData = response.data {
+                    self.cfNetWorkCache.saveHttpCache(key: url, value: receiveData)
+                    success?(receiveData)
+                }
+            }
+        }
+    }
+    
     func getWithCache(url: String, success: ((Data) -> Void)?, fail: ((Error) -> Void)?) {
         if let data = cfNetWorkCache.httpCacheForKey(key: url) {
             success?(data)
@@ -73,9 +90,7 @@ class HttpNetManager: NSObject {
                 if self.netWorkState == .notReach {
                     print("断网啦")
                 }
-                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: {
-                    fail?(error)
-                })
+                fail?(error)
             }else {
                 if let data = response.data {
                     self.cfNetWorkCache.saveHttpCache(key: url, value: data)

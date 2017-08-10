@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         return screen_s.width * 0.5
     }
     
-    let menus: [[String: String]] = [["title":"News","image":"news"],["title":"QRCodeCreatAndScan","image":"video"],["title":"CustomVideoPlayer","image":"video"],["title":"CubeRotation","image":"video"],["title":"NationalGeography","image":"video"],["title":"UIDynamic","image":"news"],["title":"hello","image":"video"],["title":"hello","image":"news"],["title":"hellohello","image":"news"],["title":"hellohellohello","image":"news"],["title":"hello","image":"video"]]
+    let menus: [[String: String]] = [["title":"News","image":"news"],["title":"QRCodeCreat","image":"video"],["title":"CustomVideoPlayer","image":"video"],["title":"CubeRotation","image":"video"],["title":"NationalGeography","image":"video"],["title":"UIDynamic","image":"news"],["title":"QRCodeScan","image":"video"],["title":"hello","image":"news"],["title":"hellohello","image":"news"],["title":"hellohellohello","image":"news"],["title":"hello","image":"video"]]
     
     lazy var wheelView: WheelPlayView = {
         let view: WheelPlayView = WheelPlayView(frame: CGRect(x: 0, y: -self.headerViewHeight, width: screen_s.width, height: self.headerViewHeight))
@@ -121,7 +121,7 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource {
         guard let title = menus[indexPath.row]["title"] else { return }
         if title == "News" {
             self.navigationController?.pushViewController(NewsMainInterfaceViewController(), animated: true)
-        } else if title == "QRCodeCreatAndScan" {
+        } else if title == "QRCodeCreat" {
             let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "QRCodeCreatViewController")
             navigationController?.pushViewController(vc, animated: true)
         } else if title == "CustomVideoPlayer" {
@@ -132,6 +132,8 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource {
             self.performSegue(withIdentifier: "NationalGeographyViewController", sender: nil)
         } else if title == "UIDynamic" {
             navigationController?.pushViewController(UIDynamicViewController(), animated: true)
+        } else if title == "QRCodeScan" {
+            navigationController?.pushViewController(QRCodeScanViewController(), animated: true)
         }
     }
     

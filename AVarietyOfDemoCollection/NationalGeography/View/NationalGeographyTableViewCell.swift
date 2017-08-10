@@ -9,7 +9,7 @@
 import UIKit
 
 protocol NationalGeographyTableViewCellDelegate: NSObjectProtocol {
-    func didSelectCell(cell: NationalGeographyCollectionViewCell, albumModel: NationalGeographyAlbumModel, indexPath: IndexPath)
+    func didSelectCell(with imageV: UIImageView, collectionView: UICollectionView, albumModel: NationalGeographyAlbumModel, indexPath: IndexPath)
 }
 
 class NationalGeographyTableViewCell: UITableViewCell {
@@ -80,6 +80,6 @@ extension NationalGeographyTableViewCell: UICollectionViewDataSource, UICollecti
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let cell = collectionView.cellForItem(at: indexPath) as? NationalGeographyCollectionViewCell else { return }
-        delegate?.didSelectCell(cell: cell, albumModel: albumModel, indexPath: indexPath)
+        delegate?.didSelectCell(with: cell.imageV, collectionView: collectionView, albumModel: albumModel, indexPath: indexPath)
     }
 }

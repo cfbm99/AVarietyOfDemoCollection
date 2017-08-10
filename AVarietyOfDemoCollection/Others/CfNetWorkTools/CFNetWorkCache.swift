@@ -12,6 +12,7 @@ struct CFNetWorkCache {
     
     fileprivate let cfDickCache = CFDataBase(filePath: "cfCache")
     fileprivate let memoryCache = NSCache<AnyObject, AnyObject>()
+    fileprivate let semaphore = DispatchSemaphore(value: 1)
     
     public func httpCacheForKey(key: String?) -> Data? {
         guard let nkey = key else { return nil }
@@ -32,7 +33,9 @@ struct CFNetWorkCache {
     }
     
     fileprivate func saveHttpCacheToDisk(key: String, value: Data) {
+        semaphore.wait()
         cfDickCache.insertData(name: key, data: value)
+        semaphore.signal()
     }
     
     fileprivate func saveHttpCacheToMemory(key: String, value: Data) {

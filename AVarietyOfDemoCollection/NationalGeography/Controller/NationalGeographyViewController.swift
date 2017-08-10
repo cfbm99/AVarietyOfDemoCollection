@@ -8,10 +8,13 @@
 
 import UIKit
 import ReactiveCocoa
+import SDWebImage
 
 class NationalGeographyViewController: UIViewController {
     
-    let viewModel = NationalGeographyViewModel()
+    fileprivate let viewModel = NationalGeographyViewModel()
+    public var currentImgV: UIImageView!
+    public var currentCollectionView: UICollectionView!
     @IBOutlet weak var listTableView: UITableView!
     
     override func viewDidLoad() {
@@ -71,9 +74,38 @@ extension NationalGeographyViewController: UITableViewDataSource {
 
 extension NationalGeographyViewController: NationalGeographyTableViewCellDelegate {
     
-    func didSelectCell(cell: NationalGeographyCollectionViewCell, albumModel: NationalGeographyAlbumModel, indexPath: IndexPath) {
-        let vc = CFPhotoBrowseViewController()
-        vc.imgUrls = albumModel.picModel.map({ $0.url })
+    func didSelectCell(with imageV: UIImageView, collectionView: UICollectionView, albumModel: NationalGeographyAlbumModel, indexPath: IndexPath) {
+        currentImgV = imageV
+        currentCollectionView = collectionView
+        let urls = albumModel.picModel.map({ $0.url })
+        var imgs = [UIImage?]()
+        for idx in 0 ..< urls.count {
+            guard let cell = collectionView.cellForItem(at: IndexPath(item: idx, section: 0)) as? NationalGeographyCollectionViewCell else { return }
+            imgs.append(cell.imageV.image)
+        }
+        let vc = CFPhotoBrowseViewController(imgUrls: urls, thumbnails: imgs, selectedIdx: indexPath.row)
+        vc.transitioningDelegate = self
+        vc.modalPresentationStyle = .custom
+        vc.delegate = self
         self.present(vc, animated: true, completion: nil)
+    }
+}
+
+extension NationalGeographyViewController: CFPhotoBrowseViewControllerDelegate {
+    
+    func panGestureForVcDismissBegin(idx: Int, isDismiss: Bool) {
+        guard let cell = currentCollectionView.cellForItem(at: IndexPath(item: idx, section: 0)) as? NationalGeographyCollectionViewCell else { return }
+        cell.imageV.isHidden = !isDismiss
+    }
+}
+
+extension NationalGeographyViewController: UIViewControllerTransitioningDelegate {
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return CFPhotoBrowseTransitionAnimation(transitionstyle: CFPhotoBrowseTransitionAnimationStyle.present)
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return CFPhotoBrowseTransitionAnimation(transitionstyle: CFPhotoBrowseTransitionAnimationStyle.dismiss)
     }
 }
