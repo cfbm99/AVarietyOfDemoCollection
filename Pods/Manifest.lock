@@ -1,0 +1,43 @@
+PODS:
+  - Alamofire (4.4.0)
+  - MJRefresh (3.1.12)
+  - ReachabilitySwift (3)
+  - ReactiveCocoa (5.0.3):
+    - ReactiveSwift (~> 1.1)
+  - ReactiveSwift (1.1.3):
+    - Result (~> 3.2)
+  - Result (3.2.2)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
+  - SnapKit (3.2.0)
+  - SQLite.swift (0.11.3):
+    - SQLite.swift/standard (= 0.11.3)
+  - SQLite.swift/standard (0.11.3)
+  - SwiftyJSON (3.1.4)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.4)
+  - MJRefresh
+  - ReachabilitySwift
+  - ReactiveCocoa
+  - SDWebImage (~> 3.8)
+  - SnapKit (~> 3.2.0)
+  - SQLite.swift
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
+  ReactiveCocoa: 066a855f613fb72f68258771095805fdb10312d2
+  ReactiveSwift: f54ba12c2e799003432930fa55495315ae44f32b
+  Result: 4edd39003fdccf281d418ee1b006571f70123250
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
+  SQLite.swift: 99b36c22084427f0abbeb957556ce1528cf10bb3
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+
+PODFILE CHECKSUM: 8f4cbb232cd0723d9431655c125955649dba9342
+
+COCOAPODS: 1.3.0.beta.2
