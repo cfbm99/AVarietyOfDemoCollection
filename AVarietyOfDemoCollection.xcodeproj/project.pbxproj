@@ -89,6 +89,10 @@
 		E881344B1F42D723008DAE74 /* CFPhotoBrowseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88134471F42D723008DAE74 /* CFPhotoBrowseItem.swift */; };
 		E881344C1F42D723008DAE74 /* CFPhotoBrowsePictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88134481F42D723008DAE74 /* CFPhotoBrowsePictureView.swift */; };
 		E881344D1F42D723008DAE74 /* ChrysanthemumIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88134491F42D723008DAE74 /* ChrysanthemumIndicatorView.swift */; };
+		E881348B1F43D91D008DAE74 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = E881348A1F43D91D008DAE74 /* Enums.swift */; };
+		E881348D1F43DD5E008DAE74 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E881348C1F43DD5E008DAE74 /* ViewModelProtocol.swift */; };
+		E88134901F43E772008DAE74 /* UITableView_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E881348F1F43E772008DAE74 /* UITableView_Extension.swift */; };
+		E882D9651F43F98500F90366 /* KaiyanEditSelectedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E882D9641F43F98500F90366 /* KaiyanEditSelectedModel.swift */; };
 		EFE119523D2C0CFE7479B7BA /* Pods_AVarietyOfDemoCollection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20D82935C782F8C4A80F6A02 /* Pods_AVarietyOfDemoCollection.framework */; };
 		F66AF964FD5E46F8322B5538 /* Pods_AVarietyOfDemoCollectionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31F349351D3DC6E97E222153 /* Pods_AVarietyOfDemoCollectionTests.framework */; };
 /* End PBXBuildFile section */
@@ -207,6 +211,10 @@
 		E88134471F42D723008DAE74 /* CFPhotoBrowseItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFPhotoBrowseItem.swift; sourceTree = "<group>"; };
 		E88134481F42D723008DAE74 /* CFPhotoBrowsePictureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFPhotoBrowsePictureView.swift; sourceTree = "<group>"; };
 		E88134491F42D723008DAE74 /* ChrysanthemumIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChrysanthemumIndicatorView.swift; sourceTree = "<group>"; };
+		E881348A1F43D91D008DAE74 /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		E881348C1F43DD5E008DAE74 /* ViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
+		E881348F1F43E772008DAE74 /* UITableView_Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableView_Extension.swift; sourceTree = "<group>"; };
+		E882D9641F43F98500F90366 /* KaiyanEditSelectedModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KaiyanEditSelectedModel.swift; path = AVarietyOfDemoCollection/Others/Extensions/KaiyanEditSelectedModel.swift; sourceTree = SOURCE_ROOT; };
 		F1991D34EA8655FB14128DD0 /* Pods-AVarietyOfDemoCollectionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVarietyOfDemoCollectionTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AVarietyOfDemoCollectionTests/Pods-AVarietyOfDemoCollectionTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -706,6 +714,7 @@
 		18D5BCC51F3AFE74005EFAAC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E882D9641F43F98500F90366 /* KaiyanEditSelectedModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -801,6 +810,9 @@
 				18BB94BA1F0F226700D3FFE2 /* FontsizeToFitSubclass.swift */,
 				18BB94BB1F0F226700D3FFE2 /* MacroDefine.swift */,
 				1820383B1F1F3B5B00FAEA19 /* PublicMethods.swift */,
+				E881348A1F43D91D008DAE74 /* Enums.swift */,
+				E881348E1F43E73F008DAE74 /* Extensions */,
+				E881348C1F43DD5E008DAE74 /* ViewModelProtocol.swift */,
 				E88134451F42D723008DAE74 /* CFPhotoBrowse */,
 				18F67F7E1ECE9CD100CCAD8E /* CfNetWorkTools */,
 				18F67F821ECE9CD100CCAD8E /* CfRefresh */,
@@ -876,6 +888,14 @@
 				E88134491F42D723008DAE74 /* ChrysanthemumIndicatorView.swift */,
 			);
 			path = CFPhotoBrowse;
+			sourceTree = "<group>";
+		};
+		E881348E1F43E73F008DAE74 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E881348F1F43E772008DAE74 /* UITableView_Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1203,6 +1223,7 @@
 				183187321ED3D73200937BF1 /* NewsMainInterfaceViewController.swift in Sources */,
 				18786B451F39921100D4F73E /* CFQRCodeScanView.swift in Sources */,
 				18BB94BD1F0F226700D3FFE2 /* FontsizeToFitSubclass.swift in Sources */,
+				E882D9651F43F98500F90366 /* KaiyanEditSelectedModel.swift in Sources */,
 				188B0BED1EE551EF0071DC31 /* NewsBaseDetailViewController.swift in Sources */,
 				E881344C1F42D723008DAE74 /* CFPhotoBrowsePictureView.swift in Sources */,
 				180C1A1A1EE933F6003EC130 /* CustomVideoPlayerTableViewCell.swift in Sources */,
@@ -1228,6 +1249,7 @@
 				18D5BCCB1F3AFE9B005EFAAC /* KaiyanViewModel.swift in Sources */,
 				182EA6F41EEFE02400F06F29 /* NationalGeographyViewController.swift in Sources */,
 				18786B3F1F3991C500D4F73E /* QRCodeCreatViewController.swift in Sources */,
+				E88134901F43E772008DAE74 /* UITableView_Extension.swift in Sources */,
 				18F67F951ECEA1A400CCAD8E /* CFNetManager.swift in Sources */,
 				180C1A181EE933F6003EC130 /* CustomVideoPlayerModel.swift in Sources */,
 				E881344B1F42D723008DAE74 /* CFPhotoBrowseItem.swift in Sources */,
@@ -1237,6 +1259,7 @@
 				18BB94BC1F0F226700D3FFE2 /* Extensions.swift in Sources */,
 				18360AE51ED52F190052DA83 /* NewsBaseViewModel.swift in Sources */,
 				18786B431F39920500D4F73E /* QRCodeScanViewController.swift in Sources */,
+				E881348D1F43DD5E008DAE74 /* ViewModelProtocol.swift in Sources */,
 				18F67F8B1ECE9CD100CCAD8E /* CFRefreshHeader.swift in Sources */,
 				184F9EC01F1865450076BEF8 /* NationalGeographyCollectionViewCell.swift in Sources */,
 				18BB94BE1F0F226700D3FFE2 /* MacroDefine.swift in Sources */,
@@ -1265,6 +1288,7 @@
 				182EA6F61EEFE07F00F06F29 /* NationalGeographyViewModel.swift in Sources */,
 				18F67F8C1ECE9CD100CCAD8E /* CFRefreshNormalHeader.swift in Sources */,
 				E881344D1F42D723008DAE74 /* ChrysanthemumIndicatorView.swift in Sources */,
+				E881348B1F43D91D008DAE74 /* Enums.swift in Sources */,
 				18F67F7C1ECE9C8E00CCAD8E /* MainInterfaceViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
